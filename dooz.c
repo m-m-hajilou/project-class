@@ -9,23 +9,18 @@ int  main(int argc, char const *argv[]) {
 
 void solverDooz(){// سلام چک شود که قبل اینکه عدد وارد شود برسی شود بازی به انتها رسیده است یا خیر.یاعلی علیه السلام
   howstart();
-  printf("%d =level",levelNumberInserted);
   while (doozEnd()!=1 || checkDoozWin()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
     if (turner()==1) {
       SelectDoozHomeUser();
-      printf("%d=turner2   ",turn);
       turn++;
 
-      printf("%d =level",levelNumberInserted);
       displaydooz();
     }
      if(doozEnd()!=1 || checkDoozWin()!=1){
       if (turner()==2) {
-        printf("%d=turner3   ",turn);
         SelectDoozHomeComputer();
         turn++;
         levelNumberInserted++;
-        printf("%d =level",levelNumberInserted);
         displaydooz();
      }//if
     }//if
@@ -59,10 +54,6 @@ void displaydooz(){
 
 int getNumber(int low,int hi){
   int inputNumber;
-    printf("\n");
-    printf(" %d ==low ",low);
-    printf(" %d  ==hi ",hi);
-    printf("\n");
     //printf("%i please insert true number  the number is %s < input number > %s And the home notFull  ",low,hi);//----------------------------------سلام از اینجا درست کردن پیام اینکه  کم و زیاد در متن چاپ شود
   do{
     scanf("%d",&inputNumber);
@@ -72,7 +63,6 @@ int getNumber(int low,int hi){
   }  while (inputNumber<=low | inputNumber>=hi);
 }
 int turner (){
-  printf("%d=turner1   ",turn);
   if((turn%=2)==0){
     return 2;
   }//if
@@ -149,7 +139,6 @@ int checkDoozWinHorizontalVector(){
     }//for y
   }//for x
   winer=compaire;
-  printf("checkDoozWinHorizontalVector" );
   return 1;
 }//checkDoozWinHorizontalVector
 
@@ -168,7 +157,6 @@ int checkDoozWinVerticalVector(){
       }//else
   }//for y
   winer=compaire;
-  printf("checkDoozWinVerticalVector" );
   return 1;
 }//checkDoozWinVerticalVector
 
@@ -185,7 +173,6 @@ int checkDoozWinCrisscrossRightVector(){
   }//else
     }//for y
   winer=compaire;
-  printf("checkDoozWinCrisscrossRightVector" );
   return 1;
 
 }//checkDoozWinCrisscrossRightVector
@@ -202,7 +189,6 @@ int checkDoozWinCrisscrossLeftVector(){
     }//for y
   }//else
   winer=compaire;
-  printf("checkDoozWinCrisscrossLeftVector" );
   return 1;
 }//checkDoozWinCrisscrossRightVector
 
