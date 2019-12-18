@@ -34,7 +34,7 @@ int setInsertNumberTowInRandomLocationIsEmpty(){
 
       finish:;//label If a vacancy is found
 }
-void setMoveUpArraye(){ // if press 8(move up)
+void setMoveUpArraye(){ // if press 
    for (int y=0;y<=2;y++)
       for  (int x=0;x<=1;x++){
          if((a[x+1][y]!=0 && a[x][y]!=0) && ((a[x+1][y]/a[x][y])==1)){//sumer cells
