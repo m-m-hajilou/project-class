@@ -1,8 +1,8 @@
 #include<stdio.h>//                                        بسم الله  الرحمن الرحیم
 int dooz[2][2],turn;
 void main(int argc, char const *argv[]) {
-  displaydooz();
   howstart();
+  displaydooz();
 }
 
 void displaydooz(){// print a list 3*3
