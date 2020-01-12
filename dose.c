@@ -13,7 +13,7 @@ void howstart(){
 
 int getNumber(int low,int hi){
   int inputNumber;
-    //printf("%i please insert true number  the number is %s < input number > %s And the home notFull  ",low,hi);//----------------------------------سلام از اینجا درست کردن پیام اینکه  کم و زیاد در متن چاپ شود
+    printf("%i please insert true number  the number is %s < input number > %s And the home notFull  ",low,hi);//----------------------------------سلام از اینجا درست کردن پیام اینکه  کم و زیاد در متن چاپ شود
   do{
     scanf("%d",&inputNumber);
     if(inputNumber>=low & inputNumber<=hi){
