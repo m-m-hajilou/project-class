@@ -1,9 +1,28 @@
 #include<stdio.h>//                                        بسم الله  الرحمن الرحیم
 int dooz[2][2],turn;
 void main(int argc, char const *argv[]) {
-  howstart();
-  displaydooz();
+solverDooz();
 }
+
+void solverDooz(){// سلام چک شود که قبل اینکه عدد وارد شود برسی شود بازی به انتها رسیده است یا خیر.یاعلی علیه السلام
+  howstart();
+  while (doozEnd()!=1 || checkDoozWin()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
+    if (turner()==1) {
+      SelectDoozHomeUser();
+      turn++;
+
+      displaydooz();
+    }
+     if(doozEnd()!=1 || checkDoozWin()!=1){
+      if (turner()==2) {
+        SelectDoozHomeComputer();
+        turn++;
+        levelNumberInserted++;
+        displaydooz();
+     }//if
+    }//if
+  }//while
+}//solverDooz
 
 void howstart(){
   printf("\t \t \t IN THE NAME OF ALLAH \n Helo gamers \n  welcome to game dooz \n  please select how starter game .\n if insertNumber = 1 your starter game or  insertNumber = 2 the computer starter game  *** for inser number in cell must your number true . the number true for select a cell and insert first insert number vertical(4<vertical>0) and then second first insert number horizontal(4<horizontal>0)***  \n \n   Let's start the game \n   \n ");
