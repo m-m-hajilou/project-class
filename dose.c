@@ -19,10 +19,10 @@ void solverDooz(){// سلام چک شود که قبل اینکه عدد وارد
         turn++;
         levelNumberInserted++;
         displaydooz();
-     }//if
-    }//if
-  }//while
-}//solverDooz
+     }
+    }
+  }
+}
 
 void howstart(){
   printf("\t \t \t IN THE NAME OF ALLAH \n Helo gamers \n  welcome to game dooz \n  please select how starter game .\n if insertNumber = 1 your starter game or  insertNumber = 2 the computer starter game  *** for inser number in cell must your number true . the number true for select a cell and insert first insert number vertical(4<vertical>0) and then second first insert number horizontal(4<horizontal>0)***  \n \n   Let's start the game \n   \n ");
