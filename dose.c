@@ -6,14 +6,14 @@ solverdose();
 
 void solverdose(){// سلام چک شود که قبل اینکه عدد وارد شود برسی شود بازی به انتها رسیده است یا خیر.یاعلی علیه السلام
   howstart();
-  while (doseEnd()!=1 || checkdoseWin()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
+  while (checkdoseWin() || !=1doseEnd()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
     if (turner()==1) {
       displaydose();
       SelectdoseHomeUser();
       turn++;
 
     }
-     if(doseEnd()!=1 || checkdoseWin()!=1){
+     if(checkdoseWin() || !=1doseEnd()!=1){
       if (turner()==2) {
         //SelectdoseHomeComputer();
         turn++;
