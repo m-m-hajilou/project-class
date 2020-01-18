@@ -1,5 +1,5 @@
 #include<stdio.h>//                                        بسم الله  الرحمن الرحیم
-int dooz[2][2],turn;
+int dooz[2][2],turn,levelNumberInserted=0;
 void main(int argc, char const *argv[]) {
 solverDooz();
 }
