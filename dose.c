@@ -15,7 +15,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
     }
      if(doseEnd()!=1 || checkdoseWin()!=1){
       if (turner()==2) {
-        SelectdoseHomeComputer();
+        //SelectdoseHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
@@ -53,11 +53,7 @@ int doseEnd(){
 }
 
 int checkdoseWin(){
-if ((checkdoseWinVerticalVector()!=1 ||  checkdoseWinHorizontalVector ()!=1 ||  checkdoseWinCrisscrossRightVector()!=1 ||  checkdoseWinCrisscrossLeftVector()!=1)&&doseEnd()==1 ){
-  printf("%d\n  the game finish in game not have winer" );
-  return 0;
-}
-  else if (checkdoseWinVerticalVector()==1 ||  checkdoseWinHorizontalVector ()==1 ||  checkdoseWinCrisscrossRightVector()==1 ||  checkdoseWinCrisscrossLeftVector()==1) {
+ if (checkdoseWinVerticalVector()==1 ||  checkdoseWinHorizontalVector ()==1 ||  checkdoseWinCrisscrossRightVector()==1 ||  checkdoseWinCrisscrossLeftVector()==1) {
     printf("%d\n  --**winer**-- =",winer );//سلام بهتره بعدا مشخص کنه کی برده
     return 1;
   }
@@ -67,15 +63,13 @@ if ((checkdoseWinVerticalVector()!=1 ||  checkdoseWinHorizontalVector ()!=1 ||  
 int checkdoseWinHorizontalVector(){
   int compaire;
   for (int x = 0; x <=2; x++) {
-    if(dose[x][0]==0){
-      return 0;}
-      else{
-    compaire=dose[x][0];
-    for (int y = 1; y <=2; y++) {
-      if (compaire!=dose[x][y]) {
+    if (dose[x][0]!=0 && dose[x][2]!=0) {
+      compaire=dose[x][0];
+      for (int y = 1; y <=2; y++) {
+        if (compaire!=dose[x][y]) {
         return  0;
+        }
       }
-    }
     }
   }
   winer=compaire;
@@ -161,7 +155,7 @@ int i,j,checkTrueInsertNumber=0;
 }
 
 int cellIsFull(int i,int j){
-if(dooz[i][j]==0){
+if(dose[i][j]==0){
   return 0;
   }
   else{
