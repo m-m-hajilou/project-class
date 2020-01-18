@@ -1,5 +1,5 @@
 #include<stdio.h>//                                        بسم الله  الرحمن الرحیم
-int dose[2][2],turn,levelNumberInserted=0;
+int dose[2][2],turn,levelNumberInserted=0,winer;
 void main(int argc, char const *argv[]) {
 solverdose();
 }
@@ -52,27 +52,27 @@ int doseEnd(){
   return 1;
 }
 
-int checkDoozWin(){
-if ((checkDoozWinVerticalVector()!=1 ||  checkDoozWinHorizontalVector ()!=1 ||  checkDoozWinCrisscrossRightVector()!=1 ||  checkDoozWinCrisscrossLeftVector()!=1)&&doozEnd()==1 ){
+int checkdoseWin(){
+if ((checkdoseWinVerticalVector()!=1 ||  checkdoseWinHorizontalVector ()!=1 ||  checkdoseWinCrisscrossRightVector()!=1 ||  checkdoseWinCrisscrossLeftVector()!=1)&&doseEnd()==1 ){
   printf("%d\n  the game finish in game not have winer" );
   return 0;
 }
-  else if (checkDoozWinVerticalVector()==1 ||  checkDoozWinHorizontalVector ()==1 ||  checkDoozWinCrisscrossRightVector()==1 ||  checkDoozWinCrisscrossLeftVector()==1) {
+  else if (checkdoseWinVerticalVector()==1 ||  checkdoseWinHorizontalVector ()==1 ||  checkdoseWinCrisscrossRightVector()==1 ||  checkdoseWinCrisscrossLeftVector()==1) {
     printf("%d\n  --**winer**-- =",winer );//سلام بهتره بعدا مشخص کنه کی برده
     return 1;
   }
   return 0;
 }
 
-int checkDoozWinHorizontalVector(){
+int checkdoseWinHorizontalVector(){
   int compaire;
   for (int x = 0; x <=2; x++) {
-    if(dooz[x][0]==0){
+    if(dose[x][0]==0){
       return 0;}
       else{
-    compaire=dooz[x][0];
+    compaire=dose[x][0];
     for (int y = 1; y <=2; y++) {
-      if (compaire!=dooz[x][y]) {
+      if (compaire!=dose[x][y]) {
         return  0;
       }
     }
@@ -82,15 +82,15 @@ int checkDoozWinHorizontalVector(){
   return 1;
 }
 
-int checkDoozWinVerticalVector(){
+int checkdoseWinVerticalVector(){
   int compaire;
   for (int y = 0; y <=2; y++) {
-    if(dooz[0][y]==0){
+    if(dose[0][y]==0){
       return 0;}
       else{
-    compaire=dooz[0][y];
+    compaire=dose[0][y];
     for (int x = 1; x <=2; x++){
-      if (compaire!=dooz[x][y]) {
+      if (compaire!=dose[x][y]) {
         return  0;
       }
     }
@@ -100,14 +100,14 @@ int checkDoozWinVerticalVector(){
   return 1;
 }
 
-int checkDoozWinCrisscrossRightVector(){
+int checkdoseWinCrisscrossRightVector(){
   int compaire;
-  if(dooz[0][0]==0){
+  if(dose[0][0]==0){
     return 0;}
     else{
-  compaire=dooz[0][0];
+  compaire=dose[0][0];
   for (int y = 1; y <=2; y++) {
-    if(compaire!=dooz[y][y]){
+    if(compaire!=dose[y][y]){
       return 0;
     }
   }
@@ -116,14 +116,14 @@ int checkDoozWinCrisscrossRightVector(){
   return 1;
 
 }
-int checkDoozWinCrisscrossLeftVector(){
+int checkdoseWinCrisscrossLeftVector(){
   int compaire;
-  if(dooz[2][2]==0){
+  if(dose[2][2]==0){
     return 0;}
     else{
-  compaire=dooz[2][2];
+  compaire=dose[2][2];
   for (int y = 2; y >=1; y--) {
-    if(compaire!=dooz[y][y]){
+    if(compaire!=dose[y][y]){
       return 0;
     }
     }
@@ -158,6 +158,15 @@ int i,j,checkTrueInsertNumber=0;
       }
     } while(checkTrueInsertNumber==0);
 
+}
+
+int cellIsFull(int i,int j){
+if(dooz[i][j]==0){
+  return 0;
+  }
+  else{
+    return 1;
+  }
 }
 
 void displaydose(){// print a list 3*3
