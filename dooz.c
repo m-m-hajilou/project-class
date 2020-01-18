@@ -99,6 +99,7 @@ int doozEnd(){
   }//for x
   return 1;
 }//doozEnd
+
 int checkDoozWin(){
 if ((checkDoozWinVerticalVector()!=1 ||  checkDoozWinHorizontalVector ()!=1 ||  checkDoozWinCrisscrossRightVector()!=1 ||  checkDoozWinCrisscrossLeftVector()!=1)&&doozEnd()==1 ){
   printf("%d\n  the game finish in game not have winer" );
