@@ -6,14 +6,14 @@ solverdose();
 
 void solverdose(){// سلام چک شود که قبل اینکه عدد وارد شود برسی شود بازی به انتها رسیده است یا خیر.یاعلی علیه السلام
   howstart();
-  while (checkdoseWin() || !=1doseEnd()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
+  while (checkdoseWin()!=1 || doseEnd()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
     if (turner()==1) {
       displaydose();
       SelectdoseHomeUser();
       turn++;
 
     }
-     if(checkdoseWin() || !=1doseEnd()!=1){
+     if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
         //SelectdoseHomeComputer();
         turn++;
@@ -53,7 +53,7 @@ int doseEnd(){
 }
 
 int checkdoseWin(){
- if (checkdoseWinVerticalVector()==1 ||  checkdoseWinHorizontalVector ()==1 ||  checkdoseWinCrisscrossRightVector()==1 ||  checkdoseWinCrisscrossLeftVector()==1) {
+ if (checkdoseWinHorizontalVector()==1) {
     printf("%d\n  --**winer**-- =",winer );//سلام بهتره بعدا مشخص کنه کی برده
     return 1;
   }
@@ -65,16 +65,16 @@ int checkdoseWinHorizontalVector(){
   for (int x = 0; x <=2; x++) {
     if (dose[x][0]!=0 && dose[x][2]!=0) {
       compaire=dose[x][0];
-      for (int y = 1; y <=2; y++) {
-        if (compaire!=dose[x][y]) {
-        return  0;
+        if (compaire==dose[x][1] && compaire==dose[x][2] ) {
+          winer=compaire;
+          return 1;
         }
+          else {
+            return 0;
+          }
       }
     }
   }
-  winer=compaire;
-  return 1;
-}
 
 int checkdoseWinVerticalVector(){
   int compaire;
