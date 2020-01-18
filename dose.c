@@ -52,6 +52,75 @@ int doseEnd(){
   return 1;
 }
 
+int checkDoozWinHorizontalVector(){
+  int compaire;
+  for (int x = 0; x <=2; x++) {
+    if(dooz[x][0]==0){
+      return 0;}
+      else{
+    compaire=dooz[x][0];
+    for (int y = 1; y <=2; y++) {
+      if (compaire!=dooz[x][y]) {
+        return  0;
+      }//if
+    }//else
+    }//for y
+  }//for x
+  winer=compaire;
+  return 1;
+}//checkDoozWinHorizontalVector
+
+int checkDoozWinVerticalVector(){
+  int compaire;
+  for (int y = 0; y <=2; y++) {
+    if(dooz[0][y]==0){
+      return 0;}
+      else{
+    compaire=dooz[0][y];
+    for (int x = 1; x <=2; x++){
+      if (compaire!=dooz[x][y]) {
+        return  0;
+      }//if
+    }//for x
+      }//else
+  }//for y
+  winer=compaire;
+  return 1;
+}//checkDoozWinVerticalVector
+
+int checkDoozWinCrisscrossRightVector(){
+  int compaire;
+  if(dooz[0][0]==0){
+    return 0;}
+    else{
+  compaire=dooz[0][0];
+  for (int y = 1; y <=2; y++) {
+    if(compaire!=dooz[y][y]){
+      return 0;
+    }//if
+  }//else
+    }//for y
+  winer=compaire;
+  return 1;
+
+}//checkDoozWinCrisscrossRightVector
+int checkDoozWinCrisscrossLeftVector(){
+  int compaire;
+  if(dooz[2][2]==0){
+    return 0;}
+    else{
+  compaire=dooz[2][2];
+  for (int y = 2; y >=1; y--) {
+    if(compaire!=dooz[y][y]){
+      return 0;
+    }//if
+    }//for y
+  }//else
+  winer=compaire;
+  return 1;
+}//checkDoozWinCrisscrossRightVector
+
+
 int turner (){
   if((turn%=2)==0){
     return 2;
