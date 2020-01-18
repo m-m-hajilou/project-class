@@ -53,7 +53,7 @@ int doseEnd(){
 }
 
 int checkdoseWin(){
- if (checkdoseWinHorizontalVector()==1) {
+ if (checkdoseWinHorizontalVector()==1 || checkdoseWinVerticalVector()==1) {
     printf("%d\n  --**winer**-- =",winer );//سلام بهتره بعدا مشخص کنه کی برده
     return 1;
   }
@@ -76,23 +76,21 @@ int checkdoseWinHorizontalVector(){
     }
   }
 
-int checkdoseWinVerticalVector(){
-  int compaire;
-  for (int y = 0; y <=2; y++) {
-    if(dose[0][y]==0){
-      return 0;}
-      else{
-    compaire=dose[0][y];
-    for (int x = 1; x <=2; x++){
-      if (compaire!=dose[x][y]) {
-        return  0;
+  int checkdoseWinVerticalVector(){
+    int compaire;
+    for (int y = 0; y <=2; y++) {
+      if (dose[y][0]!=0 && dose[y][2]!=0) {
+        compaire=dose[0][y];
+        if (compaire==dose[y][1] && compaire==dose[y][2] ) {
+          winer=compaire;
+          return 1;
+        }
+          else {
+            return 0;
+          }
       }
     }
-      }
   }
-  winer=compaire;
-  return 1;
-}
 
 int checkdoseWinCrisscrossRightVector(){
   int compaire;
