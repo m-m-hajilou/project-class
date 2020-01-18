@@ -79,7 +79,7 @@ int checkdoseWinHorizontalVector(){
   int checkdoseWinVerticalVector(){
     int compaire;
     for (int y = 0; y <=2; y++) {
-      if (dose[y][0]!=0 && dose[y][2]!=0) {
+      if (dose[0][y]!=0 && dose[2][y]!=0) {
         compaire=dose[0][y];
         if (compaire==dose[1][y] && compaire==dose[2][y] ) {
           winer=compaire;
