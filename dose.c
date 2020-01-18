@@ -52,6 +52,18 @@ int doseEnd(){
   return 1;
 }
 
+int checkDoozWin(){
+if ((checkDoozWinVerticalVector()!=1 ||  checkDoozWinHorizontalVector ()!=1 ||  checkDoozWinCrisscrossRightVector()!=1 ||  checkDoozWinCrisscrossLeftVector()!=1)&&doozEnd()==1 ){
+  printf("%d\n  the game finish in game not have winer" );
+  return 0;
+}
+  else if (checkDoozWinVerticalVector()==1 ||  checkDoozWinHorizontalVector ()==1 ||  checkDoozWinCrisscrossRightVector()==1 ||  checkDoozWinCrisscrossLeftVector()==1) {
+    printf("%d\n  --**winer**-- =",winer );//سلام بهتره بعدا مشخص کنه کی برده
+    return 1;
+  }
+  return 0;
+}
+
 int checkDoozWinHorizontalVector(){
   int compaire;
   for (int x = 0; x <=2; x++) {
@@ -62,13 +74,13 @@ int checkDoozWinHorizontalVector(){
     for (int y = 1; y <=2; y++) {
       if (compaire!=dooz[x][y]) {
         return  0;
-      }//if
-    }//else
-    }//for y
-  }//for x
+      }
+    }
+    }
+  }
   winer=compaire;
   return 1;
-}//checkDoozWinHorizontalVector
+}
 
 int checkDoozWinVerticalVector(){
   int compaire;
@@ -80,13 +92,13 @@ int checkDoozWinVerticalVector(){
     for (int x = 1; x <=2; x++){
       if (compaire!=dooz[x][y]) {
         return  0;
-      }//if
-    }//for x
-      }//else
-  }//for y
+      }
+    }
+      }
+  }
   winer=compaire;
   return 1;
-}//checkDoozWinVerticalVector
+}
 
 int checkDoozWinCrisscrossRightVector(){
   int compaire;
@@ -97,13 +109,13 @@ int checkDoozWinCrisscrossRightVector(){
   for (int y = 1; y <=2; y++) {
     if(compaire!=dooz[y][y]){
       return 0;
-    }//if
-  }//else
-    }//for y
+    }
+  }
+    }
   winer=compaire;
   return 1;
 
-}//checkDoozWinCrisscrossRightVector
+}
 int checkDoozWinCrisscrossLeftVector(){
   int compaire;
   if(dooz[2][2]==0){
@@ -113,12 +125,12 @@ int checkDoozWinCrisscrossLeftVector(){
   for (int y = 2; y >=1; y--) {
     if(compaire!=dooz[y][y]){
       return 0;
-    }//if
-    }//for y
-  }//else
+    }
+    }
+  }
   winer=compaire;
   return 1;
-}//checkDoozWinCrisscrossRightVector
+}
 
 
 int turner (){
