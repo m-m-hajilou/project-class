@@ -8,10 +8,10 @@ void solverDooz(){// سلام چک شود که قبل اینکه عدد وارد
   howstart();
   while (doozEnd()!=1 || checkDoozWin()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
     if (turner()==1) {
+      displaydooz();
       SelectDoozHomeUser();
       turn++;
 
-      displaydooz();
     }
      if(doozEnd()!=1 || checkDoozWin()!=1){
       if (turner()==2) {
@@ -39,6 +39,44 @@ int getNumber(int low,int hi){
     return inputNumber;}
     printf("***error***   your number not true   ***error*** ");
   }  while (inputNumber<=low | inputNumber>=hi);
+}
+
+int doozEnd(){
+  for (int x = 0; x <=2; x++) {
+    for (int y = 0; y <=2; y++) {
+      if(dooz[x][y]==0){
+        return 0;
+      }
+    }
+  }
+  return 1;
+}
+
+int turner (){
+  if((turn%=2)==0){
+    return 2;
+  }
+  if((turn%=2)==1){
+    return 1;
+  }
+}
+
+int SelectDoozHomeUser (){
+int i,j,checkTrueInsertNumber=0;
+  //if(doozEnd()!=0){
+    do {
+      i=getNumber(0,2);
+      j=getNumber(0,2);
+      if(cellIsFull(i,j)==1){
+      printf("the cell is full please select a cell empty");
+      }
+      else if(cellIsFull(i,j)==0){
+        dooz[i][j]=1;
+        checkTrueInsertNumber=1;
+        return 1;
+      }
+    } while(checkTrueInsertNumber==0);
+
 }
 
 void displaydooz(){// print a list 3*3
