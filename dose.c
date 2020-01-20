@@ -15,7 +15,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
     }
      if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
-        SelectdoseHomeComputer();
+        selectDosezHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
@@ -161,21 +161,21 @@ if(dose[i][j]==0){
   }
 }
 
-int  SelectDosezHomeComputer(){
+int  selectDosezHomeComputer(){
   if(levelNumberInserted==0){//  first select cell
-    systemSingelinsert();
+    systemSingelInsert();
     return 1;
   }
 }
 
-int systemSingelinsert(){
-  if(dooz[1][1]==0){
-    dooz[1][1]=2;
+int systemSingelInsert(){
+  if(cellIsFull(1,1)==0){
+    dose[1][1] = 2;
     return 1;
   }
     else if(cellIsFull(0,0)==0)
     {
-      dooz[0][0]=2;
+      dose[0][0]=2;
       return 1;
     }
   return 0;
