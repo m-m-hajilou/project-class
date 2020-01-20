@@ -166,20 +166,15 @@ int  selectDosezHomeComputer(){
   if(levelNumberInserted==0){//  first select cell
     systemSingelInsert();
     return 1;
-  }
-  elseif(levelNumberInserted==1)
-  {
-    if (selectHorizontalcellLeftToRight()==1)
+   }
+    elseif(levelNumberInserted==1)
     {
-      return 1
+      if (selectHorizontalcellLeftToRight()==1)
+      {
+      return 1;
+      }
     }
-      else
-    {
-      return 0
-    }
-
-  }
-}
+ }
 
 int systemSingelInsert(){
   int x=0,y=0,checkTrueInsertNumber=0;
@@ -211,8 +206,8 @@ int selectHorizontalcellLeftToRight()
 {
   for (int x = 0; x <= 2; x++)
   {
-    if(dooz[x][0]==2 && dooz[x][1]==0 && dooz[x][2]==0){
-      dooz[x][1]=2;
+    if(dose[x][0]==2 && dose[x][1]==0 && dose[x][2]==0){
+      dose[x][1]=2;
       return 1;
     }
   }
