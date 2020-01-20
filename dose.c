@@ -1,5 +1,5 @@
 #include<stdio.h>//                                        بسم الله  الرحمن الرحیم
-int dose[2][2],turn,levelNumberInserted=0,winer;
+int dose[3][3],turn,levelNumberInserted=0,winer;
 void main(int argc, char const *argv[]) {
 solverdose();
 }
@@ -42,8 +42,8 @@ int getNumber(int low,int hi){
 }
 
 int doseEnd(){
-  for (int x = 0; x <=2; x++) {
-    for (int y = 0; y <=2; y++) {
+  for (int x = 0; x <= 2; x++) {
+    for (int y = 0; y <= 2; y++) {
       if(dose[x][y]==0){
         return 0;
       }
@@ -53,7 +53,7 @@ int doseEnd(){
 }
 
 int checkdoseWin(){
- if (checkdoseWinHorizontalVector()==1 || checkdoseWinVerticalVector()==1) {
+ if (checkdoseWinHorizontalVector()==1 || checkdoseWinVerticalVector()==1 || checkDosezWinCrisscrossRightVector()==1 || checkdoseWinCrisscrossLeftVector()==1) {
     printf("%d\n  --**winer**-- =",winer );//سلام بهتره بعدا مشخص کنه کی برده
     return 1;
   }
@@ -62,11 +62,11 @@ int checkdoseWin(){
 
 int checkdoseWinHorizontalVector(){
   int compaire;
-  for (int x = 0; x <=2; x++) {
+  for (int x = 0; x <= 2; x++) {
     if (dose[x][0]!=0 && dose[x][2]!=0) {
-      compaire=dose[x][0];
+      compaire = dose[x][0];
         if (compaire==dose[x][1] && compaire==dose[x][2] ) {
-          winer=compaire;
+          winer = compaire;
           return 1;
         }
           else {
@@ -78,11 +78,11 @@ int checkdoseWinHorizontalVector(){
 
   int checkdoseWinVerticalVector(){
     int compaire;
-    for (int y = 0; y <=2; y++) {
+    for (int y = 0; y <= 2; y++) {
       if (dose[0][y]!=0 && dose[2][y]!=0) {
         compaire=dose[0][y];
         if (compaire==dose[1][y] && compaire==dose[2][y] ) {
-          winer=compaire;
+          winer = compaire;
           return 1;
         }
           else {
@@ -92,38 +92,38 @@ int checkdoseWinHorizontalVector(){
     }
   }
 
-int checkdoseWinCrisscrossRightVector(){
-  int compaire;
-  if(dose[0][0]==0){
-    return 0;}
-    else{
-  compaire=dose[0][0];
-  for (int y = 1; y <=2; y++) {
-    if(compaire!=dose[y][y]){
-      return 0;
+  int checkDosezWinCrisscrossRightVector(){
+    int compaire;
+    if(dose[0][0]==0){
+      return 0;}
+      else{
+        compaire=dose[0][0];
+        for (int y = 0; y <= 2; y++) {
+          if(compaire!=dose[y][y]){
+            return 0;
+          }
+        }
     }
+    winer=compaire;
+    return 1;
   }
-    }
-  winer=compaire;
-  return 1;
 
-}
 int checkdoseWinCrisscrossLeftVector(){
   int compaire;
-  if(dose[2][2]==0){
-    return 0;}
-    else{
-  compaire=dose[2][2];
-  for (int y = 2; y >=1; y--) {
-    if(compaire!=dose[y][y]){
-      return 0;
-    }
-    }
+  if(dose[0][2]==0){
+    return 0;
   }
-  winer=compaire;
-  return 1;
+    else{
+      compaire=dose[0][2];
+      if (compaire==dose[1][1] && compaire==dose[2][0] ) {
+        winer=compaire;
+        return 1;
+      }
+        else{
+          return 0;
+        }
+    }
 }
-
 
 int turner (){
   if((turn%=2)==0){
@@ -144,8 +144,8 @@ int i,j,checkTrueInsertNumber=0;
       printf("the cell is full please select a cell empty");
       }
       else if(cellIsFull(i,j)==0){
-        dose[i][j]=1;
-        checkTrueInsertNumber=1;
+        dose[i][j] = 1;
+        checkTrueInsertNumber = 1;
         return 1;
       }
     } while(checkTrueInsertNumber==0);
@@ -162,13 +162,13 @@ if(dose[i][j]==0){
 }
 
 void displaydose(){// print a list 3*3
-  for  (int x=0;x<=2;x++){
+  for  (int x = 0;x<=2;x++){
    printf("\n");
    printf("\t");
    printf("\t");
    printf("\t");
    printf("\t");
-     for (int y=0;y<=2;y++){
+     for (int y = 0;y<=2;y++){
        printf("%d",dose[x][y]);
        printf("\t");}
    printf("\n");
