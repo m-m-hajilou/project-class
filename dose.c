@@ -1,4 +1,5 @@
 #include<stdio.h>//                                        بسم الله  الرحمن الرحیم
+#include<stdlib.h>
 int dose[3][3],turn,levelNumberInserted=0,winer;
 void main(int argc, char const *argv[]) {
 solverdose();
@@ -169,16 +170,29 @@ int  selectDosezHomeComputer(){
 }
 
 int systemSingelInsert(){
+  int x=0,y=0,checkTrueInsertNumber=0;
   if(cellIsFull(1,1)==0){
     dose[1][1] = 2;
     return 1;
   }
-    else if(cellIsFull(0,0)==0)
+    else
     {
-      dose[0][0]=2;
+      do {
+        x=setRandomsNumber(0,2);
+        y=setRandomsNumber(0,2);
+        if(cellIsFull(x,y)==0)
+        {
+          dose[x][y] = 2;
+          checkTrueInsertNumber = 1;
+        }
+      } while(checkTrueInsertNumber == 0);
       return 1;
     }
-  return 0;
+}
+
+
+int setRandomsNumber(int low, int up){
+   return rand()% (up+low+1)+low;
 }
 
 void displaydose(){// print a list 3*3
