@@ -169,7 +169,7 @@ int  selectDosezHomeComputer(){
    }
     else if(levelNumberInserted==1)
     {
-      if (selectCellHorizontalLeftToMid()==1)
+      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1)
       {
       return 1;
       }
@@ -208,6 +208,18 @@ int selectCellHorizontalLeftToMid()
   {
     if(dose[x][0]==2 && dose[x][1]==0 && dose[x][2]==0){
       dose[x][1]=2;
+      return 1;
+    }
+  }
+  return 0;
+}
+
+int selectCellHorizontalMidToRight()
+{
+  for (int x = 0; x <= 2; x++)
+  {
+    if(dose[x][0]==0 && dose[x][1]==2 && dose[x][2]==0){
+      dose[x][2]=2;
       return 1;
     }
   }
