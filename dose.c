@@ -167,7 +167,7 @@ int  selectDosezHomeComputer(){
     systemSingelInsert();
     return 1;
    }
-    elseif(levelNumberInserted==1)
+    else if(levelNumberInserted==1)
     {
       if (selectHorizontalcellLeftToRight()==1)
       {
@@ -185,8 +185,8 @@ int systemSingelInsert(){
     else
     {
       do {
-        x=setRandomsNumber(0,2);
-        y=setRandomsNumber(0,2);
+        x=getRandomsNumber(0,2);
+        y=getRandomsNumber(0,2);
         if(cellIsFull(x,y)==0)
         {
           dose[x][y] = 2;
@@ -198,7 +198,7 @@ int systemSingelInsert(){
 }
 
 
-int setRandomsNumber(int low, int up){
+int getRandomsNumber(int low, int up){
    return rand()% (up+low+1)+low;
 }
 
