@@ -167,6 +167,18 @@ int  selectDosezHomeComputer(){
     systemSingelInsert();
     return 1;
   }
+  elseif(levelNumberInserted==1)
+  {
+    if (selectHorizontalcellLeftToRight()==1)
+    {
+      return 1
+    }
+    else
+    {
+      return 0
+    }
+
+  }
 }
 
 int systemSingelInsert(){
