@@ -1,6 +1,6 @@
 #include<stdio.h>//                                        بسم الله  الرحمن الرحیم
 #include<stdlib.h>
-int dose[3][3],turn,levelNumberInserted=0,winer;
+int dose[3][3],turn,levelNumberInserted=1,winer;
 void main(int argc, char const *argv[]) {
 solverdose();
 }
@@ -163,11 +163,11 @@ if(dose[i][j]==0){
 }
 
 int  selectDosezHomeComputer(){
-  if(levelNumberInserted==0){//  first select cell
+  if(levelNumberInserted==1){//  first select cell
     selectCellSingel();
     return 1;
    }
-    else if(levelNumberInserted==1)
+    else if(levelNumberInserted==2)
     {
       if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1)
       {
