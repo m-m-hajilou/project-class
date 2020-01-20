@@ -15,7 +15,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
     }
      if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
-        //SelectdoseHomeComputer();
+        SelectdoseHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
@@ -159,6 +159,26 @@ if(dose[i][j]==0){
   else{
     return 1;
   }
+}
+
+int  SelectDosezHomeComputer(){
+  if(levelNumberInserted==0){//  first select cell
+    systemSingelinsert();
+    return 1;
+  }
+}
+
+int systemSingelinsert(){
+  if(dooz[1][1]==0){
+    dooz[1][1]=2;
+    return 1;
+  }
+    else if(cellIsFull(0,0)==0)
+    {
+      dooz[0][0]=2;
+      return 1;
+    }
+  return 0;
 }
 
 void displaydose(){// print a list 3*3
