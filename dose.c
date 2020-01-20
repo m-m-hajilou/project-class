@@ -157,7 +157,7 @@ int cellIsFull(int i,int j){
 if(dose[i][j]==0){
   return 0;
 }
-  else{a
+  else{
     return 1;
   }
 }
