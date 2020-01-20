@@ -195,6 +195,18 @@ int setRandomsNumber(int low, int up){
    return rand()% (up+low+1)+low;
 }
 
+int selectHorizontalcellLeftToRight()
+{
+  for (int x = 0; x <= 2; x++)
+  {
+    if(dooz[x][0]==2 && dooz[x][1]==0 && dooz[x][2]==0){
+      dooz[x][1]=2;
+      return 1;
+    }
+  }
+  return 0;
+}
+
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
    printf("\n");
