@@ -145,7 +145,7 @@ int i,j,checkTrueInsertNumber=0;
       printf("the cell is full please select a cell empty");
       }
       else if(cellIsFull(i,j)==0){
-        dose[i][j] = 2;
+        dose[i][j] = 1;
         checkTrueInsertNumber = 1;
         return 1;
       }
@@ -169,7 +169,7 @@ int  selectDosezHomeComputer(){
    }
     else if(levelNumberInserted==2)
     {
-      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid() || selectCellVerticallMidToDown())
+      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid() || selectCellVerticallMidToDown() || selectCellVerticallDownToMid())
       {
       return 1;
       }
@@ -268,6 +268,18 @@ int selectCellVerticallMidToDown()
   {
     if(dose[0][y]==0 && dose[1][y]==2 && dose[2][y]==0){
       dose[2][y]=2;
+      return 1;
+    }
+  }
+  return 0;
+}
+
+int selectCellVerticallDownToMid()
+{
+  for (int y = 0; y <= 2; y++)
+  {
+    if(dose[2][y]==2 && dose[1][y]==0 && dose[0][y]==0){
+      dose[1][y]=2;
       return 1;
     }
   }
