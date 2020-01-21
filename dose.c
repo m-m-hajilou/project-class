@@ -298,6 +298,8 @@ int selectCellVerticallMidToUp()
   return 0;
 }
 
+
+
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
    printf("\n");
