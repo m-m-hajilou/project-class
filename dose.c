@@ -169,7 +169,7 @@ int  selectDosezHomeComputer(){
    }
     else if(levelNumberInserted==2)
     {
-      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid() || selectCellVerticallMidToDown() || selectCellVerticallDownToMid())
+      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid() || selectCellVerticallMidToDown() || selectCellVerticallDownToMid() || selectCellVerticallMidToUp())
       {
       return 1;
       }
@@ -280,6 +280,18 @@ int selectCellVerticallDownToMid()
   {
     if(dose[2][y]==2 && dose[1][y]==0 && dose[0][y]==0){
       dose[1][y]=2;
+      return 1;
+    }
+  }
+  return 0;
+}
+
+int selectCellVerticallMidToUp()
+{
+  for (int y = 0; y <= 2; y++)
+  {
+    if(dose[1][y]==2 && dose[0][y]==0 && dose[2][y]==0){
+      dose[0][y]=2;
       return 1;
     }
   }
