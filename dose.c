@@ -169,7 +169,7 @@ int  selectDosezHomeComputer(){
    }
     else if(levelNumberInserted==2)
     {
-      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1)
+      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsCenterOut()==1)
       {
       return 1;
       }
@@ -299,6 +299,31 @@ int selectCellVerticallMidToUp()
 }
 
 int selectCellCrosshairsToCenter() // Crosshairs move to center
+{
+  if(dose[1][1]==0)
+  {
+    if (dose[0][0]==2 && dose[2][2]==0)
+    {
+      dose[1][1]=2;
+      return 1;
+    }
+    else if (dose[0][2]==2 && dose[2][0]==0) {
+      dose[1][1]=2;
+      return 1;
+    }
+    else if (dose[2][0]==2 && dose[0][2]==0) {
+      dose[1][1]=2;
+      return 1;
+    }
+    else if (dose[2][2]==2 && dose[0][0]==0) {
+      dose[1][1]=2;
+      return 1;
+    }
+  }
+  return 0;
+}
+
+int selectCellCrosshairsCenterOut() // Move Crosshairs center out
 {
   if(dose[1][1]==2)
   {
