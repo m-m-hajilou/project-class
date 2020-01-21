@@ -54,7 +54,7 @@ int doseEnd(){
 }
 
 int checkdoseWin(){
- if (checkdoseWinHorizontalVector()==1 || checkdoseWinVerticalVector()==1 || checkDosezWinCrisscrossRightVector()==1 || checkdoseWinCrisscrossLeftVector()==1) {
+ if (checkdoseWinHorizontalVector()==1 || checkdoseWinVerticalVector()==1 || checkDosezWinCrosshairsRightVector()==1 || checkdoseWinCrosshairsLeftVector()==1) {
     printf("%d\n  --**winer**-- =",winer );//سلام بهتره بعدا مشخص کنه کی برده
     return 1;
   }
@@ -93,7 +93,7 @@ int checkdoseWinHorizontalVector(){
     }
   }
 
-  int checkDosezWinCrisscrossRightVector(){
+  int checkDosezWinCrosshairsRightVector(){
     int compaire;
     if(dose[0][0]==0){
       return 0;}
@@ -109,7 +109,7 @@ int checkdoseWinHorizontalVector(){
     return 1;
   }
 
-int checkdoseWinCrisscrossLeftVector(){
+int checkdoseWinCrosshairsLeftVector(){
   int compaire;
   if(dose[0][2]==0){
     return 0;
@@ -169,7 +169,7 @@ int  selectDosezHomeComputer(){
    }
     else if(levelNumberInserted==2)
     {
-      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1)
+      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1)
       {
       return 1;
       }
@@ -298,7 +298,30 @@ int selectCellVerticallMidToUp()
   return 0;
 }
 
-
+int selectCellCrosshairsToCenter() // Crosshairs move to center
+{
+  if(dose[1][1]==2)
+  {
+    if (dose[0][0]==0 && dose[2][2]==0)
+    {
+      dose[0][0]=2;
+      return 1;
+    }
+    else if (dose[0][2]==0 && dose[2][0]==0) {
+      dose[0][2]=2;
+      return 1;
+    }
+    else if (dose[2][0]==0 && dose[0][2]==0) {
+      dose[2][0]=2;
+      return 1;
+    }
+    else if (dose[2][2]==0 && dose[0][0]==0) {
+      dose[2][2]=2;
+      return 1;
+    }
+  }
+  return 0;
+}
 
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
