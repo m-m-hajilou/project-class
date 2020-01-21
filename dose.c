@@ -145,7 +145,7 @@ int i,j,checkTrueInsertNumber=0;
       printf("the cell is full please select a cell empty");
       }
       else if(cellIsFull(i,j)==0){
-        dose[i][j] = 2;
+        dose[i][j] = 1;
         checkTrueInsertNumber = 1;
         return 1;
       }
