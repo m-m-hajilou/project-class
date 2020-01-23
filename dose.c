@@ -286,7 +286,7 @@ int selectCellVerticallDownToMid()
 
 }
 
-int selectCellVerticallMidToUp()selectCellDecussateDownToUp()
+int selectCellVerticallMidToUp()
 {
   for (int y = 0; y <= 2; y++)
   {
