@@ -169,7 +169,7 @@ int  selectDosezHomeComputer(){
    }
     else if(levelNumberInserted==2)
     {
-      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1 || selectCellCrosshairsCenterOut()==1 || selectCellDecussateLeftToRight()==1 || selectCellDecussateRightToLeft()==1)
+      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1 || selectCellCrosshairsCenterOut()==1 || selectCellDecussateLeftToRight()==1 || selectCellDecussateRightToLeft()==1 || selectCellDecussateUpToDown()==1)
       {
       return 1;
       }
@@ -284,7 +284,7 @@ int selectCellVerticallDownToMid()
   }
   return 0;
 }
- 
+
 int selectCellVerticallMidToUp()
 {
   for (int y = 0; y <= 2; y++)
@@ -365,6 +365,18 @@ int selectCellDecussateRightToLeft()
     if (dose[x][1]==0 && dose[x][2]==2 && dose[x][0]==0)
      {
       dose[x][0]=2;
+      return 1;
+    }
+  }
+  return  0;
+}
+
+int selectCellDecussateUpToDown()
+{
+  for (int y = 0; y < 3; y++) {
+    if (dose[1][y]==0 && dose[0][y]==2 && dose[2][y]==0)
+     {
+      dose[2][y]=2;
       return 1;
     }
   }
