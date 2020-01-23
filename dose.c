@@ -283,6 +283,7 @@ int selectCellVerticallDownToMid()
     }
   }
   return 0;
+
 }
 
 int selectCellVerticallMidToUp()
@@ -308,6 +309,7 @@ int selectCellCrosshairsToCenter() // Crosshairs move to center
     }
     else if (dose[0][2]==2 && dose[2][0]==0) {
       dose[1][1]=2;
+
       return 1;
     }
     else if (dose[2][0]==2 && dose[0][2]==0) {
