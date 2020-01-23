@@ -284,7 +284,7 @@ int selectCellVerticallDownToMid()
   }
   return 0;
 }
-
+ 
 int selectCellVerticallMidToUp()
 {
   for (int y = 0; y <= 2; y++)
