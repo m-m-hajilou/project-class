@@ -456,9 +456,9 @@ int selecCellCrosshairsDecussateUpLeftToDownRight()
 
 int selecCellCrosshairsDecussateDownLeftToUpRight()
 {
-  if(dose[1][1]==0 && dose[2][2]==2 && dose[0][]==0)
+  if(dose[1][1]==0 && dose[2][2]==2 && dose[0][2]==0)
   {
-    dose[0][0]=2;
+    dose[0][2]=2;
     return 1;
   }
   return 0;
