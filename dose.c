@@ -169,7 +169,7 @@ int  selectDosezHomeComputer(){
    }
     else if(levelNumberInserted==2)
     {
-      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1 || selectCellCrosshairsCenterOut()==1 || selectCellDecussateLeftToRight()==1 || selectCellDecussateRightToLeft()==1 || selectCellDecussateUpToDown()==1 || selectCellDecussateDownToUp()==1 || selecetCellEmptyRow()==1)
+      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 ||selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1 || selectCellCrosshairsCenterOut()==1 || selectCellDecussateLeftToRight()==1 || selectCellDecussateRightToLeft()==1 || selectCellDecussateUpToDown()==1 || selectCellDecussateDownToUp()==1 || selecetCellEmptyRow()==1 || selecetCellEmptyColumn()==1)
       {
       return 1;
       }
@@ -404,6 +404,20 @@ int selecetCellEmptyRow()
     {
       rand=getRandomsNumber(0,2);
       dose[x][rand]=2;
+      return 1;
+    }
+  }
+  return 0;
+}
+
+int selecetCellEmptyColumn()
+{
+  int rand;
+  for (int y = 0; y < 3 ; y++) {
+    if (dose[0][y]==0 && dose[1][y]==0 && dose[2][y]==0)
+    {
+      rand=getRandomsNumber(0,2);
+      dose[rand][y]=2;
       return 1;
     }
   }
