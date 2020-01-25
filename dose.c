@@ -424,6 +424,45 @@ int selecetCellEmptyColumn()
   return 0;
 }
 
+int selecCellCrosshairsDecussateUpRightToDownLeft()
+{
+  if(dose[1][1]==0 && dose[0][0]==2 && dose[2][2]==0)
+  {
+    dose[2][2]=2;
+    return 1;
+  }
+  return 0;
+}
+
+int selecCellCrosshairsDecussateDownRightToUpLeft()
+{
+  if(dose[1][1]==0 && dose[2][0]==2 && dose[0][2]==0)
+  {
+    dose[0][2]=2;
+    return 1;
+  }
+  return 0;
+}
+
+int selecCellCrosshairsDecussateUpLeftToDownRight()
+{
+  if(dose[1][1]==0 && dose[0][2]==2 && dose[2][0]==0)
+  {
+    dose[2][0]=2;
+    return 1;
+  }
+  return 0;
+}
+
+int selecCellCrosshairsDecussateDownLeftToUpRight()
+{
+  if(dose[1][1]==0 && dose[2][2]==2 && dose[0][]==0)
+  {
+    dose[0][0]=2;
+    return 1;
+  }
+  return 0;
+}
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
    printf("\n");
