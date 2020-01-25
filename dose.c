@@ -403,7 +403,7 @@ int selecetCellEmptyRow()
     if (dose[x][0]==0 && dose[x][1]==0 && dose[x][2]==0)
     {
       rand=getRandomsNumber(0,2);
-      dose[x][rand]=2
+      dose[x][rand]=2;
       return 1;
     }
   }
