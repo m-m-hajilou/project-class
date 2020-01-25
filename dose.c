@@ -396,6 +396,19 @@ int selectCellDecussateDownToUp()
   }
   return  0;
 }
+int selecetCellEmptyRow()
+{
+  int rand;
+  for (int x = 0; x < 3 ; x++) {
+    if (dose[x][0]==0 && dose[x][1]==0 && dose[x][2]==0)
+    {
+      rand=getRandomsNumber(0,2);
+      dose[x][rand]=2
+      return 1;
+    }
+  }
+  return 0;
+}
 
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
