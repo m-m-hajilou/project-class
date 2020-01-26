@@ -478,7 +478,6 @@ int slecetCellForwin()
 {
   for  (int x = 0;x<=2;x++)
   {
-
     for  (int y = 0; y<=2; y++)
     {
       if(cellIsFull(x,y)==0)
@@ -489,10 +488,10 @@ int slecetCellForwin()
           return 1;
         }
       }
-        else
-        {
-          dose[x][y]=0;
-        }
+          else
+          {
+            dose[x][y]=0;
+          }
     }
   }
   return 0;
