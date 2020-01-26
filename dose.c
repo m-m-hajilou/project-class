@@ -174,6 +174,10 @@ int  selectDosezHomeComputer(){
       return 1;
       }
     }
+    else if(levelNumberInserted==2)
+    {
+      return 1;
+    }
  }
 
 int selectCellSingel(){
@@ -462,6 +466,28 @@ int selecCellCrosshairsDecussateDownLeftToUpRight()
     return 1;
   }
   return 0;
+}
+int slecetCellForwin()
+{
+  int number;
+  for  (int x = 0;x<=2;x++)
+  {
+
+    for  (int y = 0; y<=2; y++)
+    {
+      number=dose[x][y];
+      dose[x][y]=2;
+      if(checkDoozWin()==1)
+      {
+        return 1;
+      }
+        else
+        {
+          dose[x][y]=number;
+        }
+    }
+  }
+  return 0;    
 }
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
