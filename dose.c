@@ -174,10 +174,16 @@ int  selectDosezHomeComputer(){
       return 1;
       }
     }
-    else if(levelNumberInserted==3)
+    else if(levelNumberInserted>=3)
     {
       if(slecetCellForwin()==1)
-      return 1;
+      {
+        return 1;
+      }
+        else
+        {
+          levelNumberInserted--;
+        }
     }
  }
 
@@ -470,21 +476,22 @@ int selecCellCrosshairsDecussateDownLeftToUpRight()
 }
 int slecetCellForwin()
 {
-  int number;
   for  (int x = 0;x<=2;x++)
   {
 
     for  (int y = 0; y<=2; y++)
     {
-      number=dose[x][y];
-      dose[x][y]=2;
-      if(checkdoseWin()==1)
+      if(cellIsFull(x,y)==0)
       {
-        return 1;
+        dose[x][y]=2;
+        if(checkdoseWin()==1)
+        {
+          return 1;
+        }
       }
         else
         {
-          dose[x][y]=number;
+          dose[x][y]=0;
         }
     }
   }
