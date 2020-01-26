@@ -174,8 +174,9 @@ int  selectDosezHomeComputer(){
       return 1;
       }
     }
-    else if(levelNumberInserted==2)
+    else if(levelNumberInserted==3)
     {
+      if(slecetCellForwin()==1)
       return 1;
     }
  }
@@ -477,7 +478,7 @@ int slecetCellForwin()
     {
       number=dose[x][y];
       dose[x][y]=2;
-      if(checkDoozWin()==1)
+      if(checkdoseWin()==1)
       {
         return 1;
       }
@@ -487,7 +488,7 @@ int slecetCellForwin()
         }
     }
   }
-  return 0;    
+  return 0;
 }
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
