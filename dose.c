@@ -59,7 +59,7 @@ int checkdoseWin(){
     return 1;
   }
   return 0;
-}
+} 
 
 int checkdoseWinHorizontalVector(){
   int compaire;
