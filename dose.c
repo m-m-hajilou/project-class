@@ -189,7 +189,7 @@ int  selectDoseHomeComputer(){
     }
     else if(levelNumberInserted>=3)//selectCellButJustForWin
     {
-      if(slecetCellForwin()==1)
+      if(slecetCellForwin()==1 || slecetCellForNotWinUser()==1)
       {
         return 1;
       }
@@ -508,7 +508,25 @@ int slecetCellForwin()
 }
 int slecetCellForNotWinUser()
 {
-
+  for  (int x = 0;x<=2;x++)
+  {
+    for  (int y = 0; y<=2; y++)
+    {
+      if(cellIsFull(x,y)==0)
+      {
+        dose[x][y]=1;
+        if(checkdoseWin()==1)
+        {
+          return 1;
+        }
+          else
+          {
+            dose[x][y]=0;
+          }
+        }
+    }
+  }
+  return 0;
 }
 
 void displaydose(){// print a list 3*3
