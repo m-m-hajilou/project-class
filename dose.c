@@ -169,7 +169,8 @@ int controlSelectDoseHomeComputer()
   }
     else
     {
-
+      levelNumberInserted --;
+      selectDoseHomeComputer();    
     }
 
 }
