@@ -517,6 +517,7 @@ int slecetCellForNotWinUser()
         dose[x][y]=1;
         if(checkdoseWin()==1)
         {
+          dose[x][y]=2;
           return 1;
         }
           else
