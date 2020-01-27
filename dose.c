@@ -180,10 +180,6 @@ int  selectDosezHomeComputer(){
       {
         return 1;
       }
-        else
-        {
-          levelNumberInserted--;
-        }
     }
     return 0;
  }
