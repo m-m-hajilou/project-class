@@ -16,7 +16,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
     }
      if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
-        selectDoseHomeComputer();
+        controlSelectDoseHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
@@ -160,6 +160,18 @@ if(dose[i][j]==0){
   else{
     return 1;
   }
+}
+int controlSelectDoseHomeComputer()
+{
+  if(selectDoseHomeComputer()==1)
+  {
+    return 1;
+  }
+    else
+    {
+
+    }
+
 }
 
 int  selectDoseHomeComputer(){
