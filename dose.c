@@ -176,7 +176,7 @@ int  selectDoseHomeComputer(){
     }
     else if(levelNumberInserted>=3)
     {
-      if(slecetCellForwin()==1 || selecetCellEmptyRow()==1 || selecetCellEmptyColumn()==1)
+      if(slecetCellForwin()==1)
       {
         return 1;
       }
