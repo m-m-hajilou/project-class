@@ -161,7 +161,7 @@ if(dose[i][j]==0){
     return 1;
   }
 }
-int controlSelectDoseHomeComputer()
+int controlSelectDoseHomeComputer()//changerLevel for selectCell read command  selectDoseHomeComputer()
 {
   if(selectDoseHomeComputer()==1)
   {
@@ -505,6 +505,10 @@ int slecetCellForwin()
     }
   }
   return 0;
+}
+int slecetCellForNotWinUser()
+{
+
 }
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
