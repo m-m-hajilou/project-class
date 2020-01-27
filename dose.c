@@ -6,17 +6,17 @@ solverdose();
 }
 
 void solverdose(){// سلام چک شود که قبل اینکه عدد وارد شود برسی شود بازی به انتها رسیده است یا خیر.یاعلی علیه السلام
-  int checkAndControlLevelNumberInserted=0;
   howstart();
   while (checkdoseWin()!=1 || doseEnd()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
     if (turner()==1) {
       displaydose();
-      checkAndControlLevelNumberInserted(SelectdoseHomeUser());
+      SelectdoseHomeUser();
       turn++;
+
     }
      if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
-        checkAndselectDosezHomeComputer();
+        selectDosezHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
@@ -180,6 +180,11 @@ int  selectDosezHomeComputer(){
       {
         return 1;
       }
+        else
+        {
+          levelNumberInserted--;
+        }
+    }
     return 0;
  }
 
@@ -487,15 +492,11 @@ int slecetCellForwin()
           {
             dose[x][y]=0;
           }
-      }
+        }
     }
   }
   return 0;
 }
-  int checkAndControlLevelNumberInserted (int numberRturnSolverCumputer)
-  {
-    if()
-  }
 void displaydose(){// print a list 3*3
   for  (int x = 0;x<=2;x++){
    printf("\n");
