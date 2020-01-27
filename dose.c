@@ -16,7 +16,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
     }
      if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
-        selectDosezHomeComputer();
+        selectDoesHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
@@ -162,7 +162,7 @@ if(dose[i][j]==0){
   }
 }
 
-int  selectDosezHomeComputer(){
+int  selectDoesHomeComputer(){
   if(levelNumberInserted==1){//  first select cell
     selectCellSingel();
     return 1;
