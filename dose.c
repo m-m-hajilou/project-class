@@ -12,7 +12,6 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
       displaydose();
       SelectdoseHomeUser();
       turn++;
-
     }
      if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
@@ -20,9 +19,10 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
         turn++;
         levelNumberInserted++;
         displaydose();
-     }
+      }
     }
   }
+  calculaterWiner();
 }
 
 void howstart(){
@@ -59,7 +59,7 @@ int checkdoseWin(){
     return 1;
   }
   return 0;
-} 
+}
 
 int checkdoseWinHorizontalVector(){
   int compaire;
@@ -506,6 +506,7 @@ int slecetCellForwin()
   }
   return 0;
 }
+
 int slecetCellForNotWinUser()
 {
   for  (int x = 0;x<=2;x++)
@@ -544,4 +545,18 @@ void displaydose(){// print a list 3*3
    printf("\n");}
 
   printf("\n");
+}
+int calculaterWiner()
+{
+  if(checkdoseWin()==0 && doseEnd()==1)
+  {
+    winer=0;
+    printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but not winer.if you want winer then again disport dose (-:)" );
+    return 0;
+  }
+    elseif(checkdoseWin()==1)
+    {
+      printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but not winer.if you want winer then again disport dose (-:)" );
+      return 1;
+    }
 }
