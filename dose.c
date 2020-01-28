@@ -559,7 +559,7 @@ int printWinerOrMessagefinish()
       {
         printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your Winer.if you want winer again then disport dose (-:)" );
       }
-        else if(winer==1)
+        else if(winer==2)
         {
           printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your not Winer.if you want winer  then again disport dose (-:)" );
         }
