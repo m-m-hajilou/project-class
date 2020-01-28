@@ -22,6 +22,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
       }
     }
   }
+  displaydose();
   printWinerOrMessagefinish();
 }
 
