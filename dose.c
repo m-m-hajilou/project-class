@@ -15,7 +15,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
     }
      if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
-        controlSelectDoseHomeComputer();
+        //controlSelectDoseHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
