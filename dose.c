@@ -99,8 +99,10 @@ int checkdoseWinHorizontalVector(){
       return 0;}
       else{
         compaire=dose[0][0];
-        for (int y = 0; y <= 2; y++) {
-          if(compaire!=dose[y][y]){
+        for (int y = 0; y <= 2; y++)
+        {
+          if(compaire!=dose[y][y])
+          {
             return 0;
           }
         }
