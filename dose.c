@@ -1,6 +1,6 @@
 #include<stdio.h>//                                        بسم الله  الرحمن الرحیم
 #include<stdlib.h>
-int dose[3][3],turn,levelNumberInserted=1,winer;
+int dose[3][3],turn,levelNumberInserted=1,winer=0;
 void main(int argc, char const *argv[]) {
 solverdose();
 }
