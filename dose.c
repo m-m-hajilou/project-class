@@ -553,13 +553,13 @@ int printWinerOrMessagefinish()
   {
     printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but not winer.if you want winer then again disport dose (-:)" );
   }
-    elseif(calculaterWiner()==1)
+    else if(calculaterWiner()==1)
     {
       if(winer==1)
       {
         printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your Winer.if you want winer again then disport dose (-:)" );
       }
-        elseif(winer==1)
+        else if(winer==1)
         {
           printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your not Winer.if you want winer  then again disport dose (-:)" );
         }
@@ -572,7 +572,7 @@ int calculaterWiner()
   {
     return 0;
   }
-    elseif(checkdoseWin()==1)
+    else if(checkdoseWin()==1)
     {
       return 1;
     }
