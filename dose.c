@@ -54,10 +54,10 @@ int doseEnd(){
 }
 
 int checkdoseWin(){
- if (checkdoseWinHorizontalVector()==1 || checkdoseWinVerticalVector()==1 || checkDosezWinCrosshairsRightVector()==1 || checkdoseWinCrosshairsLeftVector()==1) {
-    //printf("%d\n  --**winer**-- =",winer );//سلام بهتره بعدا مشخص کنه کی برده
-    return 1;
-  }
+ if (checkdoseWinHorizontalVector()==1 || checkdoseWinVerticalVector()==1 || checkDosezWinCrosshairsRightVector()==1 || checkdoseWinCrosshairsLeftVector()==1)
+ {
+   return 1;
+ }
   return 0;
 }
 
