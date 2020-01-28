@@ -22,7 +22,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
       }
     }
   }
-  calculaterWiner();
+  printWinerOrMessagefinish();
 }
 
 void howstart(){
@@ -546,17 +546,34 @@ void displaydose(){// print a list 3*3
 
   printf("\n");
 }
+
+int printWinerOrMessagefinish()
+{
+  if(calculaterWiner()==0)
+  {
+    printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but not winer.if you want winer then again disport dose (-:)" );
+  }
+    elseif(calculaterWiner()==1)
+    {
+      if(winer==1)
+      {
+        printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your Winer.if you want winer again then disport dose (-:)" );
+      }
+        elseif(winer==1)
+        {
+          printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your not Winer.if you want winer  then again disport dose (-:)" );
+        }
+    }
+}
+
 int calculaterWiner()
 {
   if(checkdoseWin()==0 && doseEnd()==1)
   {
-    winer=0;
-    printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but not winer.if you want winer then again disport dose (-:)" );
     return 0;
   }
     elseif(checkdoseWin()==1)
     {
-      printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but not winer.if you want winer then again disport dose (-:)" );
       return 1;
     }
 }
