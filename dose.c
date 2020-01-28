@@ -15,7 +15,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
     }
      if(checkdoseWin()!=1 && doseEnd()!=1){
       if (turner()==2) {
-        controlSelectDoseHomeComputer();
+        //controlSelectDoseHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
@@ -557,11 +557,11 @@ int printWinerOrMessagefinish()
   }
     else if(calculaterWiner()==1)
     {
-      if(winer==2)
+      if(winer==1)
       {
         printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your Winer.if you want winer again then disport dose (-:)" );
       }
-        else if(winer==1)
+        else if(winer==2)
         {
           printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your not Winer.if you want winer  then again disport dose (-:)" );
         }
