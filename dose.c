@@ -7,7 +7,7 @@ solverdose();
 
 void solverdose(){// سلام چک شود که قبل اینکه عدد وارد شود برسی شود بازی به انتها رسیده است یا خیر.یاعلی علیه السلام
   howstart();
-  while (checkdoseWin()!=1 || doseEnd()!=1) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
+  while (checkdoseWin()==0 || doseEnd()==0) {//  ویا اگر رسیده است باید به گونه ای تمام شود یاعلی علیه السلام
     if (turner()==1) {
       displaydose();
       SelectdoseHomeUser();
@@ -15,7 +15,7 @@ void solverdose(){// سلام چک شود که قبل اینکه عدد وارد
     }
      if(checkdoseWin()!=1 || doseEnd()!=1){
       if (turner()==2) {
-        //controlSelectDoseHomeComputer();
+        controlSelectDoseHomeComputer();
         turn++;
         levelNumberInserted++;
         displaydose();
