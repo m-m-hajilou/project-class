@@ -172,7 +172,7 @@ int controlSelectDoseHomeComputer()//changerLevel for selectCell read command  s
   }
     else
     {
-      levelNumberInserted = 2;
+      levelNumberInserted --;
       selectDoseHomeComputer();
     }
 
