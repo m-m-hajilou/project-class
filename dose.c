@@ -487,6 +487,23 @@ int selecCellCrosshairsDecussateDownLeftToUpRight()
   }
   return 0;
 }
+
+int slecetCellJustempty()
+{
+  for  (int x = 0;x<=2;x++)
+  {
+    for  (int y = 0; y<=2; y++)
+    {
+      if (dose[x][y]== 0)
+      {
+        dose[x][y]==2;
+        return 1;
+      }
+    }
+  }
+  return 0;
+}
+
 int slecetCellForwin()
 {
   for  (int x = 0;x<=2;x++)
