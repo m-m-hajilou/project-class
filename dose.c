@@ -173,9 +173,17 @@ int controlSelectDoseHomeComputer()//changerLevel for selectCell read command  s
     else
     {
       levelNumberInserted --;
-      selectDoseHomeComputer();
-    }
+      if(selectDoseHomeComputer()==1)
+      {
+        return 1 ;
+        else
+        {
+          slecetCellJustempty();
+        }
 
+      }
+    }
+  return 0;
 }
 
 int  selectDoseHomeComputer(){
