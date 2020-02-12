@@ -179,7 +179,7 @@ int controlSelectDoseHomeComputer()//changerLevel for selectCell read command  s
       }
         else
         {
-          slecetCellJustempty();
+          slecetCellJustempty();//just for end game
         }
 
     }
