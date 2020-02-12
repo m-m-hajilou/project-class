@@ -176,12 +176,12 @@ int controlSelectDoseHomeComputer()//changerLevel for selectCell read command  s
       if(selectDoseHomeComputer()==1)
       {
         return 1 ;
+      }
         else
         {
           slecetCellJustempty();
         }
 
-      }
     }
 }
 
@@ -197,7 +197,7 @@ int  selectDoseHomeComputer(){
       return 1;
       }
     }
-    else if(levelNumberInserted=>3)//selectCellButJustForWin or not win
+    else if(levelNumberInserted==3)//selectCellButJustForWin or not win
     {
       if(slecetCellForwin()==1 || slecetCellForNotWinUser()==1)
       {
