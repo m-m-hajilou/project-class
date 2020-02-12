@@ -503,7 +503,7 @@ int slecetCellJustempty()
     {
       if (dose[x][y]== 0)
       {
-        dose[x][y]==2;
+        dose[x][y]=2;
         return 1;
       }
     }
