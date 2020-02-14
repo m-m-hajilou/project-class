@@ -33,7 +33,7 @@ void solverdose(){
 
 void howstart()
 {
-  printf("\t \t \t IN THE NAME OF ALLAH \n Helo gamers \n  welcome to game dose \n  please select how starter game .\n if insertNumber = 1 your starter game or  insertNumber = 2 the computer starter game  *** for select cell must your number true . the number true for select a cell and insert first: insert number vertical(0<=vertical<=2) and then second first insert number horizontal(0<=horizontal<=2)***  \n \n   Let's start the game \n   \n ");
+  printf("\t \t \t IN THE NAME OF ALLAH \n Helo gamers \n  welcome to game dose \n  please select how starter game .\n if insertNumber = 1 your starter game or  insertNumber = 2 the computer starter game  *** for select cell must your number true . the number true for select a cell and insert first: insert number vertical(0<=vertical<=2) and then second  insert number horizontal(0<=horizontal<=2)***  \n \n   Let's start the game \n   \n ");
   displaydose();
   turn=getNumber(1,2);
 }
