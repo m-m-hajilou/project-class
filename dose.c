@@ -277,7 +277,8 @@ int selectCellHorizontalLeftToMid()
 {
   for (int x = 0; x <= 2; x++)
   {
-    if(dose[x][0]==2 && dose[x][1]==0 && dose[x][2]==0){
+    if(dose[x][0]==2 && dose[x][1]==0 && dose[x][2]==0)
+    {
       dose[x][1]=2;
       return 1;
     }
@@ -289,7 +290,8 @@ int selectCellHorizontalMidToRight()
 {
   for (int x = 0; x <= 2; x++)
   {
-    if(dose[x][0]==0 && dose[x][1]==2 && dose[x][2]==0){
+    if(dose[x][0]==0 && dose[x][1]==2 && dose[x][2]==0)
+    {
       dose[x][2]=2;
       return 1;
     }
@@ -301,7 +303,8 @@ int selectCellHorizontalRightToMid()
 {
   for (int x = 0; x <= 2; x++)
   {
-    if(dose[x][2]==2 && dose[x][1]==0 && dose[x][0]==0){
+    if(dose[x][2]==2 && dose[x][1]==0 && dose[x][0]==0)
+    {
       dose[x][1]=2;
       return 1;
     }
@@ -313,7 +316,8 @@ int selectCellHorizontalMidToLeft()
 {
   for (int x = 0; x <= 2; x++)
   {
-    if(dose[x][0]==0 && dose[x][1]==2 && dose[x][2]==0){
+    if(dose[x][0]==0 && dose[x][1]==2 && dose[x][2]==0)
+    {
       dose[x][0]=2;
       return 1;
     }
@@ -325,7 +329,8 @@ int selectCellVerticallUpToMid()
 {
   for (int y = 0; y <= 2; y++)
   {
-    if(dose[0][y]==2 && dose[1][y]==0 && dose[2][y]==0){
+    if(dose[0][y]==2 && dose[1][y]==0 && dose[2][y]==0)
+    {
       dose[1][y]=2;
       return 1;
     }
@@ -349,20 +354,21 @@ int selectCellVerticallDownToMid()
 {
   for (int y = 0; y <= 2; y++)
   {
-    if(dose[2][y]==2 && dose[1][y]==0 && dose[0][y]==0){
+    if(dose[2][y]==2 && dose[1][y]==0 && dose[0][y]==0)
+    {
       dose[1][y]=2;
       return 1;
     }
   }
   return 0;
-
 }
 
 int selectCellVerticallMidToUp()
 {
   for (int y = 0; y <= 2; y++)
   {
-    if(dose[1][y]==2 && dose[0][y]==0 && dose[2][y]==0){
+    if(dose[1][y]==2 && dose[0][y]==0 && dose[2][y]==0)
+    {
       dose[0][y]=2;
       return 1;
     }
@@ -379,16 +385,18 @@ int selectCellCrosshairsToCenter() // Crosshairs move to center
       dose[1][1]=2;
       return 1;
     }
-    else if (dose[0][2]==2 && dose[2][0]==0) {
-      dose[1][1]=2;
-
-      return 1;
-    }
-    else if (dose[2][0]==2 && dose[0][2]==0) {
+    else if (dose[0][2]==2 && dose[2][0]==0)
+    {
       dose[1][1]=2;
       return 1;
     }
-    else if (dose[2][2]==2 && dose[0][0]==0) {
+    else if (dose[2][0]==2 && dose[0][2]==0)
+    {
+      dose[1][1]=2;
+      return 1;
+    }
+    else if (dose[2][2]==2 && dose[0][0]==0)
+    {
       dose[1][1]=2;
       return 1;
     }
@@ -405,15 +413,18 @@ int selectCellCrosshairsCenterOut() // Move Crosshairs center out
       dose[0][0]=2;
       return 1;
     }
-    else if (dose[0][2]==0 && dose[2][0]==0) {
+    else if (dose[0][2]==0 && dose[2][0]==0)
+    {
       dose[0][2]=2;
       return 1;
     }
-    else if (dose[2][0]==0 && dose[0][2]==0) {
+    else if (dose[2][0]==0 && dose[0][2]==0)
+    {
       dose[2][0]=2;
       return 1;
     }
-    else if (dose[2][2]==0 && dose[0][0]==0) {
+    else if (dose[2][2]==0 && dose[0][0]==0)
+    {
       dose[2][2]=2;
       return 1;
     }
@@ -423,7 +434,8 @@ int selectCellCrosshairsCenterOut() // Move Crosshairs center out
 
 int selectCellDecussateLeftToRight()
 {
-  for (int x = 0; x < 3; x++) {
+  for (int x = 0; x < 3; x++)
+  {
     if (dose[x][1]==0 && dose[x][0]==2 && dose[x][2]==0)
      {
       dose[x][2]=2;
@@ -447,7 +459,8 @@ int selectCellDecussateRightToLeft()
 
 int selectCellDecussateUpToDown()
 {
-  for (int y = 0; y < 3; y++) {
+  for (int y = 0; y < 3; y++)
+  {
     if (dose[1][y]==0 && dose[0][y]==2 && dose[2][y]==0)
      {
       dose[2][y]=2;
@@ -459,7 +472,8 @@ int selectCellDecussateUpToDown()
 
 int selectCellDecussateDownToUp()
 {
-  for (int y = 0; y < 3; y++) {
+  for (int y = 0; y < 3; y++)
+  {
     if (dose[1][y]==0 && dose[2][y]==2 && dose[0][y]==0)
      {
       dose[0][y]=2;
@@ -471,7 +485,8 @@ int selectCellDecussateDownToUp()
 int selecetCellEmptyRow()
 {
   int rand;
-  for (int x = 0; x < 3 ; x++) {
+  for (int x = 0; x < 3 ; x++)
+  {
     if (dose[x][0]==0 && dose[x][1]==0 && dose[x][2]==0)
     {
       rand=getRandomsNumber(0,2);
@@ -485,7 +500,8 @@ int selecetCellEmptyRow()
 int selecetCellEmptyColumn()
 {
   int rand;
-  for (int y = 0; y < 3 ; y++) {
+  for (int y = 0; y < 3 ; y++)
+  {
     if (dose[0][y]==0 && dose[1][y]==0 && dose[2][y]==0)
     {
       rand=getRandomsNumber(0,2);
@@ -600,15 +616,18 @@ int slecetCellForNotWinUser()
 }
 
 void displaydose(){// print a list 3*3
-  for  (int x = 0;x<=2;x++){
+  for  (int x = 0;x<=2;x++)
+  {
    printf("\n");
    printf("\t");
    printf("\t");
    printf("\t");
    printf("\t");
-     for (int y = 0;y<=2;y++){
+     for (int y = 0;y<=2;y++)
+     {
        printf("%d",dose[x][y]);
-       printf("\t");}
+       printf("\t");
+     }
    printf("\n");
    printf("\n");}
 
