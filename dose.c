@@ -97,7 +97,8 @@ int checkdoseWinHorizontalVector()
     }
   }
 
-  int checkdoseWinVerticalVector(){
+  int checkdoseWinVerticalVector()
+  {
     int compaire;
     for (int y = 0; y <= 2; y++)
     {
