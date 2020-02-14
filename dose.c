@@ -174,7 +174,6 @@ int turner ()
 int SelectdoseHomeUser ()
 {
 int i,j,checkTrueInsertNumber=0;
-  //if(doseEnd()!=0){
     do {
       i=getNumber(0,2);
       j=getNumber(0,2);
