@@ -28,7 +28,7 @@ void solverdose(){
     }
   }
   displaydose();
-  printWinerOrMessagefinish();
+  printWinerOrMessagefinishDose();
 }
 
 void howstart()
@@ -202,7 +202,7 @@ int cellIsFull(int i,int j)
       return 1;
     }
 }
-int controlSelectDoseHomeComputer()//changerLevel for selectCell read command  selectDoseHomeComputer()
+int controlSelectDoseHomeComputer()//changerLevel for selectCell  please read command  selectDoseHomeComputer()
 {
   if(selectDoseHomeComputer()==1)
   {
@@ -229,14 +229,14 @@ int  selectDoseHomeComputer()
     selectCellSingel();
     return 1;
   }
-    else if(levelNumberInserted==2)//selectCellForBeforewin
+    else if(levelNumberInserted==2)//selectCell For Before win
     {
-      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 || selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1 || selectCellCrosshairsCenterOut()==1 || selectCellDecussateLeftToRight()==1 || selectCellDecussateRightToLeft()==1 || selectCellDecussateUpToDown()==1 || selectCellDecussateDownToUp()==1 || selecetCellEmptyRow()==1 || selecetCellEmptyColumn()==1 || selecCellCrosshairsDecussateUpRightToDownLeft()==1 || selecCellCrosshairsDecussateDownRightToUpLeft()==1 || selecCellCrosshairsDecussateUpLeftToDownRight()==1 || selecCellCrosshairsDecussateDownLeftToUpRight()==1)
+      if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 || selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1 || selectCellCrosshairsCenterOut()==1 || selectCellDecussateLeftToRight()==1 || selectCellDecussateRightToLeft()==1 || selectCellDecussateUpToDown()==1 || selectCellDecussateDownToUp()==1 || selecetCellEmptyRow()==1 || selecetCellEmptyColumn()==1 || selectCellCrosshairsDecussateUpRightToDownLeft()==1 || selectCellCrosshairsDecussateDownRightToUpLeft()==1 || selecCellCrosshairsDecussateUpLeftToDownRight()==1 || selecCellCrosshairsDecussateDownLeftToUpRight()==1)
       {
       return 1;
       }
     }
-    else if(levelNumberInserted==3)//selectCellButJustForWin or not win
+    else if(levelNumberInserted==3)//selectCell But Just For Win or not win
     {
       if(slecetCellForwin()==1 || slecetCellForNotWinUser()==1)
       {
@@ -269,7 +269,10 @@ int selectCellSingel()
     }
 }
 
-int getRandomsNumber(int low, int up){
+//"*read cooment for discover move . dose have up: {(0,0),(0,1),(0,2)} down :{(2,0),(2,1),(2,2)} left :{(0,0),(1,0),(2,0)} right :{(0,2),(1,2),(2,2)} mid :{(0,1),(1,1),(2,1)}*"
+
+int getRandomsNumber(int low, int up)
+{
    return rand()% (up+low+1)+low;
 }
 
@@ -376,7 +379,7 @@ int selectCellVerticallMidToUp()
   return 0;
 }
 
-int selectCellCrosshairsToCenter() // Crosshairs move to center
+int selectCellCrosshairsToCenter() // Crosshairs move corner to center
 {
   if(dose[1][1]==0)
   {
@@ -404,7 +407,7 @@ int selectCellCrosshairsToCenter() // Crosshairs move to center
   return 0;
 }
 
-int selectCellCrosshairsCenterOut() // Move Crosshairs center out
+int selectCellCrosshairsCenterOut() // Move Crosshairs center to corner
 {
   if(dose[1][1]==2)
   {
@@ -512,7 +515,7 @@ int selecetCellEmptyColumn()
   return 0;
 }
 
-int selecCellCrosshairsDecussateUpRightToDownLeft()
+int selectCellCrosshairsDecussateUpRightToDownLeft()
 {
   if(dose[1][1]==0 && dose[0][0]==2 && dose[2][2]==0)
   {
@@ -522,7 +525,7 @@ int selecCellCrosshairsDecussateUpRightToDownLeft()
   return 0;
 }
 
-int selecCellCrosshairsDecussateDownRightToUpLeft()
+int selectCellCrosshairsDecussateDownRightToUpLeft()
 {
   if(dose[1][1]==0 && dose[2][0]==2 && dose[0][2]==0)
   {
@@ -634,7 +637,7 @@ void displaydose(){// print a list 3*3
   printf("\n");
 }
 
-int printWinerOrMessagefinish()
+int printWinerOrMessagefinishDose()
 {
   if(calculaterWiner()==0)
   {
