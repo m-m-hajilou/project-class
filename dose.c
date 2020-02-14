@@ -53,10 +53,14 @@ int getNumber(int low,int hi)
   }  while (inputNumber<=low | inputNumber>=hi);
 }
 
-int doseEnd(){
-  for (int x = 0; x <= 2; x++) {
-    for (int y = 0; y <= 2; y++) {
-      if(dose[x][y]==0){
+int doseEnd()
+{
+  for (int x = 0; x <= 2; x++)
+  {
+    for (int y = 0; y <= 2; y++)
+    {
+      if(dose[x][y]==0)
+      {
         return 0;
       }
     }
@@ -64,7 +68,8 @@ int doseEnd(){
   return 1;
 }
 
-int checkdoseWin(){
+int checkdoseWin()
+{
  if (checkdoseWinHorizontalVector()==1 || checkdoseWinVerticalVector()==1 || checkDosezWinCrosshairsRightVector()==1 || checkdoseWinCrosshairsLeftVector()==1)
  {
    return 1;
@@ -72,12 +77,16 @@ int checkdoseWin(){
 return 0;
 }
 
-int checkdoseWinHorizontalVector(){
+int checkdoseWinHorizontalVector()
+{
   int compaire;
-  for (int x = 0; x <= 2; x++) {
-    if (dose[x][0]!=0 && dose[x][2]!=0) {
+  for (int x = 0; x <= 2; x++)
+  {
+    if (dose[x][0]!=0 && dose[x][2]!=0)
+    {
       compaire = dose[x][0];
-        if (compaire==dose[x][1] && compaire==dose[x][2] ) {
+        if (compaire==dose[x][1] && compaire==dose[x][2] )
+        {
           winer = compaire;
           return 1;
         }
@@ -90,10 +99,13 @@ int checkdoseWinHorizontalVector(){
 
   int checkdoseWinVerticalVector(){
     int compaire;
-    for (int y = 0; y <= 2; y++) {
-      if (dose[0][y]!=0 && dose[2][y]!=0) {
+    for (int y = 0; y <= 2; y++)
+    {
+      if (dose[0][y]!=0 && dose[2][y]!=0)
+      {
         compaire=dose[0][y];
-        if (compaire==dose[1][y] && compaire==dose[2][y] ) {
+        if (compaire==dose[1][y] && compaire==dose[2][y] )
+        {
           winer = compaire;
           return 1;
         }
@@ -104,11 +116,15 @@ int checkdoseWinHorizontalVector(){
     }
   }
 
-  int checkDosezWinCrosshairsRightVector(){
+  int checkDosezWinCrosshairsRightVector()
+  {
     int compaire;
-    if(dose[0][0]==0){
-      return 0;}
-      else{
+    if(dose[0][0]==0)
+    {
+      return 0;
+    }
+      else
+      {
         compaire=dose[0][0];
         for (int y = 0; y <= 2; y++)
         {
@@ -122,42 +138,52 @@ int checkdoseWinHorizontalVector(){
     return 1;
   }
 
-int checkdoseWinCrosshairsLeftVector(){
+int checkdoseWinCrosshairsLeftVector()
+{
   int compaire;
-  if(dose[0][2]==0){
+  if(dose[0][2]==0)
+  {
     return 0;
   }
     else{
       compaire=dose[0][2];
-      if (compaire==dose[1][1] && compaire==dose[2][0] ) {
+      if (compaire==dose[1][1] && compaire==dose[2][0] )
+      {
         winer=compaire;
         return 1;
       }
-        else{
+        else
+        {
           return 0;
         }
     }
 }
 
-int turner (){
-  if((turn%=2)==0){
+int turner ()
+{
+  if((turn%=2)==0)
+  {
     return 2;
   }
-  if((turn%=2)==1){
+  if((turn%=2)==1)
+  {
     return 1;
   }
 }
 
-int SelectdoseHomeUser (){
+int SelectdoseHomeUser ()
+{
 int i,j,checkTrueInsertNumber=0;
   //if(doseEnd()!=0){
     do {
       i=getNumber(0,2);
       j=getNumber(0,2);
-      if(cellIsFull(i,j)==1){
+      if(cellIsFull(i,j)==1)
+      {
       printf("the cell is full please select a cell empty \n \n");
       }
-      else if(cellIsFull(i,j)==0){
+      else if(cellIsFull(i,j)==0)
+      {
         dose[i][j] = 1;
         checkTrueInsertNumber = 1;
         return 1;
@@ -166,13 +192,15 @@ int i,j,checkTrueInsertNumber=0;
 
 }
 
-int cellIsFull(int i,int j){
-if(dose[i][j]==0){
-  return 0;
-}
-  else{
-    return 1;
+int cellIsFull(int i,int j)
+{
+  if(dose[i][j]==0)
+  {
+    return 0;
   }
+    else{
+      return 1;
+    }
 }
 int controlSelectDoseHomeComputer()//changerLevel for selectCell read command  selectDoseHomeComputer()
 {
@@ -191,15 +219,16 @@ int controlSelectDoseHomeComputer()//changerLevel for selectCell read command  s
         {
           slecetCellJustempty();//just for end game
         }
-
     }
 }
 
-int  selectDoseHomeComputer(){
-  if(levelNumberInserted==1){//  first select cell
+int  selectDoseHomeComputer()
+{
+  if(levelNumberInserted==1)//  first select cell
+  {
     selectCellSingel();
     return 1;
-   }
+  }
     else if(levelNumberInserted==2)//selectCellForBeforewin
     {
       if (selectCellHorizontalLeftToMid()==1 || selectCellHorizontalMidToRight()==1 || selectCellHorizontalRightToMid()==1 ||  selectCellHorizontalMidToLeft()==1 || selectCellVerticallUpToMid()==1 || selectCellVerticallMidToDown()==1 || selectCellVerticallDownToMid()==1 || selectCellVerticallMidToUp()==1 || selectCellCrosshairsToCenter()==1 || selectCellCrosshairsCenterOut()==1 || selectCellDecussateLeftToRight()==1 || selectCellDecussateRightToLeft()==1 || selectCellDecussateUpToDown()==1 || selectCellDecussateDownToUp()==1 || selecetCellEmptyRow()==1 || selecetCellEmptyColumn()==1 || selecCellCrosshairsDecussateUpRightToDownLeft()==1 || selecCellCrosshairsDecussateDownRightToUpLeft()==1 || selecCellCrosshairsDecussateUpLeftToDownRight()==1 || selecCellCrosshairsDecussateDownLeftToUpRight()==1)
@@ -217,9 +246,11 @@ int  selectDoseHomeComputer(){
     return 0;
  }
 
-int selectCellSingel(){
+int selectCellSingel()
+{
   int x=0,y=0,checkTrueInsertNumber=0;
-  if(cellIsFull(1,1)==0){
+  if(cellIsFull(1,1)==0)
+  {
     dose[1][1] = 2;
     return 1;
   }
