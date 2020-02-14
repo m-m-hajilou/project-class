@@ -176,9 +176,9 @@ int SelectdoseHomeUser ()
 {
 int i,j,checkTrueInsertNumber=0;
     do {
-      printf("insert number horizontal \n");
+      printf("insert number horizontal:  ");
       i=getNumber(0,2);
-      printf("insert number vertical \n");
+      printf("insert number vertical:  ");
       j=getNumber(0,2);
       if(cellIsFull(i,j)==1)
       {
