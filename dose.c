@@ -643,17 +643,17 @@ int printWinerOrMessagefinishDose()
 {
   if(calculaterWiner()==0)
   {
-    printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but not winer.if you want winer then again disport dose (-:) \n ya ALi" );
+    printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but not winer.if you want winer then again disport dose (-:) \n Ya ALi" );
   }
     else if(calculaterWiner()==1)
     {
       if(winer==1)
       {
-        printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your Winer.if you want winer again then disport dose (-:) \n ya ALi" );
+        printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your Winer.if you want winer again then disport dose (-:) \n YA ALi" );
       }
         else if(winer==2)
         {
-          printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your not Winer.if you want winer  then again disport dose (-:) \n ya ALi" );
+          printf("%s\n"," IN THE NAME OF ALLAH \n the game finish but Your not Winer.if you want winer  then again disport dose (-:) \n YA ALi" );
         }
     }
 }
