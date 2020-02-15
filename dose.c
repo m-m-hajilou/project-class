@@ -41,7 +41,7 @@ displaydose(3,3,dose);
 int getNumber(int low,int hi)
 {
   int inputNumber;
-    printf(" please insert true number  the number is %d <= input number >= %d And the home notFull  ",low,hi);
+    printf(" please insert true number  the number is %d <= input number >= %d And the home notFull \n \n ",low,hi);
   do
   {
     scanf("%d",&inputNumber);
