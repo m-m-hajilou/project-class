@@ -620,7 +620,7 @@ int slecetCellForNotWinUser()
   return 0;
 }
 
-void displaydose(){// print a list 3*3
+void displaydose(int horizontal,int vertical,int array [horizontal],[vertical]){// print a list 3*3
   for  (int x = 0;x<=2;x++)
   {
    printf("\n");
@@ -630,7 +630,7 @@ void displaydose(){// print a list 3*3
    printf("\t");
      for (int y = 0;y<=2;y++)
      {
-       printf("%d",dose[x][y]);
+       printf("%d",array[x][y]);
        printf("\t");
      }
    printf("\n");
