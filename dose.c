@@ -41,7 +41,7 @@ displaydose(3,3,dose);
 int getNumber(int low,int hi)
 {
   int inputNumber;
-    //printf("%i please insert true number  the number is %s < input number > %s And the home notFull  ",low,hi);//----------------------------------سلام از اینجا درست کردن پیام اینکه  کم و زیاد در متن چاپ شود
+    printf(" please insert true number  the number is %d <= input number >= %d And the home notFull  ",low,hi);
   do
   {
     scanf("%d",&inputNumber);
