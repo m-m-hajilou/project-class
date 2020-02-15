@@ -12,7 +12,7 @@ void solverdose(){
   {
     if (turner()==1)
     {
-      displaydose();
+    displaydose(3,3,dose);
       SelectdoseHomeUser();
       turn++;
     }
@@ -23,18 +23,18 @@ void solverdose(){
         controlSelectDoseHomeComputer();
         turn++;
         levelNumberInserted++;
-        displaydose();
+      displaydose(3,3,dose);
       }
     }
   }
-  displaydose();
+displaydose(3,3,dose);
   printWinerOrMessagefinishDose();
 }
 
 void howstart()
 {
   printf("\t \t \t IN THE NAME OF ALLAH \n Helo gamers \n  welcome to game dose \n  please select how starter game .\n if insertNumber = 1 your starter game or  insertNumber = 2 the computer starter game  *** for select cell must your number true . the number true for select a cell and insert first: insert number vertical(0<=vertical<=2) and then second  insert number horizontal(0<=horizontal<=2)***  \n \n   Let's start the game \n   \n ");
-  displaydose();
+displaydose(3,3,dose);
   turn=getNumber(1,2);
 }
 
@@ -620,7 +620,7 @@ int slecetCellForNotWinUser()
   return 0;
 }
 
-void displaydose(int horizontal,int vertical,int array [horizontal],[vertical]){// print a list 3*3
+void displaydose(int horizontal,int vertical,int array [horizontal][vertical]){// print a list 3*3
   for  (int x = 0;x<=2;x++)
   {
    printf("\n");
