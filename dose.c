@@ -238,13 +238,13 @@ int  selectDoseHomeComputer()
       return 1;
       }
     }
-    else if(levelNumberInserted==3)//selectCell But Just For Win or not win
-    {
-      if(slecetCellForwin()==1 || slecetCellForNotWinUser()==1)
-      {
-        return 1;
-      }
-    }
+       else if(levelNumberInserted==3)//selectCell But Just For Win or not win
+       {
+         if(slecetCellForwin()==1 || slecetCellForNotWinUser()==1)
+         {
+           return 1;
+         }
+       }
     return 0;
  }
 
