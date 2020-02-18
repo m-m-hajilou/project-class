@@ -1,10 +1,8 @@
-
-#ifndef HAJILOU_H_
-#define HAJILOU_H_
+#include<stdio.h>
+float inputNumber;
 float getNumberConfine(int low,int hi,char message)
 {
-  int inputNumber;
-    printf("%s please insert true number  the number is %d <= input number >= %d And the home notFull \n \n ",message,low,hi);
+  printf("%s please insert true number  the number is %d <= input number >= %d And the home notFull \n \n ",message,low,hi);
   do
   {
     scanf("%f",&inputNumber);
