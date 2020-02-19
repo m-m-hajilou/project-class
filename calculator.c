@@ -9,9 +9,11 @@ float calculator()
   float number1= getNumber();
 
   printf("%s\n","please insert oprator \n \n");
-  scanf("%s\n",oprator);
+  scanf("%s",&oprator);
 
-  printf("%s\n","please insert seond number \n \n");
+
+
+  printf("%s\n","please inserttt seond number \n \n");
   float number2= getNumber();
 }
 
