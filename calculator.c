@@ -18,7 +18,7 @@ float calculator()
   switch (oprator) {
     case '*':
     javab=divisible(number1,number2);
-    printf("%i\n",javab );
+    printf("%f\n",javab);
       break;
   }
 
