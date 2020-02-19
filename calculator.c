@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "hajilou.h"
-//#include "calculatorDivisible.h"
+#include "calculatorDivisible.h"
 float calculator()
 {
   char oprator;
@@ -10,9 +10,15 @@ float calculator()
 
   printf("%s\n","please insert oprator \n \n");
   scanf("%s",&oprator);
-  
+
   printf("%s\n","please inserttt seond number \n \n");
   float number2= getNumber();
+
+  switch (oprator) {
+    case '*':
+
+      break;
+  }
 }
 
 int main(int argc, char const *argv[])
