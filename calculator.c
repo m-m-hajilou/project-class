@@ -10,9 +10,7 @@ float calculator()
 
   printf("%s\n","please insert oprator \n \n");
   scanf("%s",&oprator);
-
-
-
+  
   printf("%s\n","please inserttt seond number \n \n");
   float number2= getNumber();
 }
