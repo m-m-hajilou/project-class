@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "hajilou.h"
+//#include "hajilou.h"
 #include "calculatorDivisible.h"
 float calculator()
 {
@@ -17,8 +17,13 @@ float calculator()
 
   switch (oprator) {
     case '*':
-    javab=divisible(number1,number2);
-    printf("%f\n",javab);
+      FILE *fp;
+
+      fp = fopen("hajilou.h", "r");
+      javab=divisible(number1,number2);
+      fclose(fp);
+      javab=divisible(number1,number2);
+      printf("%f\n",javab);
       break;
   }
 
