@@ -5,6 +5,8 @@ float calculator()
 {
   float javab;
   char oprator;
+  int number1;
+  int number2;
   getnumberAndOprator(&number1,&number2,&oprator);
   switch (oprator) {
     case '*':
