@@ -18,12 +18,20 @@ float calculator()
     case '*':
     {
     #include "calculatorDivisible.h"
+    getnumberAndOprator(number1,number2,oprator);
     javab=divisible(number1,number2);
     printf("%f\n",javab );
       break;
     }
   }
 
+}
+
+int getnumberAndOprator(const int &n1, const int &n2,const char &oprator)
+{
+  n1=4;
+  n2=1;
+  oprator="*";
 }
 
 int main(int argc, char const *argv[])
