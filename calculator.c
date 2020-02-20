@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "hajilou.h"
+int getnumberAndOprator( int *,  int *, char *);
 float calculator()
 {
   float javab;
@@ -29,8 +30,8 @@ float calculator()
 
 int getnumberAndOprator( int *n1,  int *n2, char *oprator)
 {
-  n1=4;
-  n2=1;
+  *n1=4;
+  *n2=4;
   oprator="*";
 }
 
