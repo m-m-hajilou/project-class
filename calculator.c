@@ -9,7 +9,7 @@ float calculator()
   int number2;
   getnumberAndOprator(&number1,&number2,&oprator);
   switch (oprator) {
-    case '*':
+    case '/':
     {
     #include "calculatorDivisible.h"
 
@@ -29,8 +29,8 @@ int getnumberAndOprator( int *number1,  int *number2, char *operator)
   *number1= getNumber();
 
   printf("%s\n","please insert oprator \n \n");
-  scanf("%s",oprat);
-  *operator=&oprat;
+  scanf("%s",&oprat);
+  *operator=oprat;
 
   printf("%s\n","please inserttt seond number \n \n");
   *number2= getNumber();
