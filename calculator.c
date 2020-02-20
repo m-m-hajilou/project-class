@@ -6,13 +6,13 @@ float calculator()
   char oprator;
   printf("%s\n","IN THE NAME OF ALLH hi this is a calculator first : insert number1  second : insert operator (*,/,+,-) third :insert number2  \n \n");
   printf("%s\n","please insert first number \n \n");
-  float number1= getNumber();
+  float number1;
 
   printf("%s\n","please insert oprator \n \n");
   scanf("%s",&oprator);
 
   printf("%s\n","please inserttt seond number \n \n");
-  float number2= getNumber();
+  float number2;
 
   switch (oprator) {
     case '*':
@@ -27,7 +27,7 @@ float calculator()
 
 }
 
-int getnumberAndOprator(const int &n1, const int &n2,const char &oprator)
+int getnumberAndOprator( int *n1,  int  *n2, char *oprator)
 {
   n1=4;
   n2=1;
