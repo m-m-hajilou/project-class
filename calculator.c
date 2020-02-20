@@ -5,12 +5,12 @@ float calculator()
 {
   float javab;
   char oprator;
-
+  getnumberAndOprator(&number1,&number2,&oprator);
   switch (oprator) {
     case '*':
     {
     #include "calculatorDivisible.h"
-    getnumberAndOprator(&number1,&number2,&oprator);
+
     javab=divisible(number1,number2);
     printf("%f\n",javab );
       break;
