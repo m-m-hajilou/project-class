@@ -59,15 +59,15 @@ int getNumbers( int *number1,  int *number2)
 
 int getOperator(char *operator)
 {
-  int oprat;//just send pointer
+  int operat;//just send pointer
   printf("%s\n","please insert operator \n \n");
-  scanf("%s",&oprat);
+  scanf("%s",&operat);
 
-  while((operator!='*',operator!='/',operator!='+',operator!='-'))
+  while((operat!='*' || operat!='/' || operat!='+' || operat!='-'))
   {
-    scanf("%s",&oprat);
+    scanf("%s",&operat);
   }
-  *operator=oprat;
+  *operator=operat;
   return 1;
 }
 
