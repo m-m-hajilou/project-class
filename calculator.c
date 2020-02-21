@@ -16,6 +16,13 @@ float calculator()
     printf("%f\n",javab );
       break;
     }
+    case '*':
+    {
+    #include "calculatorMulti.h"
+    javab=multi(number1,number2);
+    printf("\n%f\n",javab );
+      break;
+    }
   }
 
 }
@@ -31,7 +38,7 @@ int getnumberAndOprator( int *number1,  int *number2, char *operator)
   scanf("%s",&oprat);
   *operator=oprat;
 
-  printf("%s\n","please inserttt seond number \n \n");
+  printf("%s\n","please inserttt second number \n \n");
   *number2= getNumber();
 
 }
