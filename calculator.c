@@ -37,6 +37,10 @@ float calculator()
     printf("\n%f\n",answer );
       break;
     }
+    default:
+    {
+      printf("%s\n","Your operator cannot be identified in our application" );
+    }
   }
 
 }
