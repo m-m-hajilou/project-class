@@ -23,6 +23,13 @@ float calculator()
     printf("\n%f\n",javab );
       break;
     }
+    case '-':
+    {
+    #include "calculatorMinus.h"
+    javab=minus(number1,number2);
+    printf("\n%f\n",javab );
+      break;
+    }
   }
 
 }
