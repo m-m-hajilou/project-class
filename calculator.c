@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include "hajilou.h"
-int getnumberAndOprator( int *,  int *, char *);
+int getOperator( char *);
+int getNumber( int *,  int *);
 float calculator()
 {
   float answer;
-  char oprator;
+  char operator;
   int number1;
   int number2;
-  getnumberAndOprator(&number1,&number2,&oprator);
-  switch (oprator) {
+  getNumberAndoperator(&number1,&number2,&operator);
+  switch (operator) {
     case '/':
     {
     #include "calculatorDivisible.h"
@@ -45,20 +46,25 @@ float calculator()
 
 }
 
-int getnumberAndOprator( int *number1,  int *number2, char *operator)
+int getNumberAndoperator( int *number1,  int *number2, char *operator)
 {
   int oprat;//just send pointer
   printf("%s\n","IN THE NAME OF ALLH hi this is a calculator first : insert number1  second : insert operator (*,/,+,-) third :insert number2  \n \n");
   printf("%s\n","please insert first number \n \n");
   *number1= getNumber();
 
-  printf("%s\n","please insert oprator \n \n");
+  printf("%s\n","please insert operator \n \n");
   scanf("%s",&oprat);
   *operator=oprat;
 
   printf("%s\n","please inserttt second number \n \n");
   *number2= getNumber();
 
+}
+
+int getOperator( char *)
+{
+  
 }
 
 int main(int argc, char const *argv[])
