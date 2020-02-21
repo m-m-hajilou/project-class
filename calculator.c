@@ -12,7 +12,6 @@ float calculator()
     case '/':
     {
     #include "calculatorDivisible.h"
-
     javab=divisible(number1,number2);
     printf("%f\n",javab );
       break;
