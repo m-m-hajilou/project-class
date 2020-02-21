@@ -30,6 +30,13 @@ float calculator()
     printf("\n%f\n",javab );
       break;
     }
+    case '+':
+    {
+    #include "calculatorSum.h"
+    javab=sum(number1,number2);
+    printf("\n%f\n",javab );
+      break;
+    }
   }
 
 }
