@@ -3,7 +3,7 @@
 int getnumberAndOprator( int *,  int *, char *);
 float calculator()
 {
-  float javab;
+  float answer;
   char oprator;
   int number1;
   int number2;
@@ -12,29 +12,29 @@ float calculator()
     case '/':
     {
     #include "calculatorDivisible.h"
-    javab=divisible(number1,number2);
-    printf("%f\n",javab );
+    answer=divisible(number1,number2);
+    printf("%f\n",answer );
       break;
     }
     case '*':
     {
     #include "calculatorMulti.h"
-    javab=multi(number1,number2);
-    printf("\n%f\n",javab );
+    answer=multi(number1,number2);
+    printf("\n%f\n",answer );
       break;
     }
     case '-':
     {
     #include "calculatorMinus.h"
-    javab=minus(number1,number2);
-    printf("\n%f\n",javab );
+    answer=minus(number1,number2);
+    printf("\n%f\n",answer );
       break;
     }
     case '+':
     {
     #include "calculatorSum.h"
-    javab=sum(number1,number2);
-    printf("\n%f\n",javab );
+    answer=sum(number1,number2);
+    printf("\n%f\n",answer );
       break;
     }
   }
