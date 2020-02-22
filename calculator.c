@@ -61,11 +61,9 @@ int getOperator(char *operator)
 {
   char operat;//just send pointer
   printf("%s\n","please insert operator \n \n");
-  scanf("%s",&operat);
-  while( operat !='*' || operat !='+' || operat !='-' || operat !='/')
-  {
-    scanf("%s\n",&operat );
-  }
+  do {
+    scanf("%s",&operat);
+  }while(( operat !='*'| operat !='/'));
   *operator=operat;
   return 1;
 }
