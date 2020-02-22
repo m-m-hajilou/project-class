@@ -62,7 +62,7 @@ int getNumbersAndOperator(float *number1,float *number2,char *operator)
 int getOperator(char *operator)
 {
   char operat;//just send pointer
-  int check;
+  int check=0;
   printf("%s\n","please insert operator \n \n");
   scanf("%s",&operat);
   if(operat =='*' || operat =='+' || operat =='-' || operat =='/')
