@@ -71,7 +71,7 @@ int getOperator(char *operator)
   }
   while(check==0)
   {
-    printf("%s\n","please insert  true operator \n \n");
+    printf("%s\n"," * *The operator isnot true .  please insert  true operator* * \n \n");
     scanf("%s\n",&operat );
     if(operat !='*' || operat !='+' || operat !='-' || operat !='/')
     {
