@@ -60,12 +60,21 @@ int getNumbers( int *number1,  int *number2)
 int getOperator(char *operator)
 {
   char operat;//just send pointer
+  int check;
   printf("%s\n","please insert operator \n \n");
   scanf("%s",&operat);
-  while( operat !='*' || operat !='+' || operat !='-' || operat !='/')
+  if(operat !='*' || operat !='+' || operat !='-' || operat !='/')
+  {
+    check=1;
+  }
+  while(check==0)
   {
     printf("%s\n","please insert  true operator \n \n");
     scanf("%s\n",&operat );
+    if(operat !='*' || operat !='+' || operat !='-' || operat !='/')
+    {
+      check=1;
+    }
   }
   *operator=operat;
   return 1;
