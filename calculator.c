@@ -8,7 +8,9 @@ float calculator()
   char operator;
   float number1;
   float number2;
+  printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for comput: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand)" );
   getNumbersAndOperator(&number1,&number2,&operator);
+
   switch (operator) {
     case '/':
     {
