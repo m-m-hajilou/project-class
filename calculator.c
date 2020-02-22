@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include "hajilou.h"
-int getNumbersAndOperator( int *,  int *,char *operator);
+int getNumbersAndOperator( float *,  float *,char *);
 int getOperator( char *);
 float calculator()
 {
   float answer;
   char operator;
-  int number1;
-  int number2;
-  getNumbers(&number1,&number2);
-  getOperator(&operator);
+  float number1;
+  float number2;
+  getNumbersAndOperator(&number1,&number2,&operator);
   switch (operator) {
     case '/':
     {
@@ -47,13 +46,13 @@ float calculator()
 
 }
 
-int getNumbersAndOperator(int *number1,int *number2,char *operator)
+int getNumbersAndOperator(float *number1,float *number2,char *operator)
 {
   printf("%s\n","IN THE NAME OF ALLH hi this is a calculator first : insert number1  second : insert operator (*,/,+,-) third :insert number2  \n \n");
   printf("%s\n","please insert first number \n \n");
   *number1= getNumber();
 
-  getOperator(*operator);
+  getOperator(operator);
 
   printf("%s\n","please inserttt second number \n \n");
   *number2= getNumber();
