@@ -65,7 +65,7 @@ int getOperator(char *operator)
   int check;
   printf("%s\n","please insert operator \n \n");
   scanf("%s",&operat);
-  if(operat !='*' || operat !='+' || operat !='-' || operat !='/')
+  if(operat =='*' || operat =='+' || operat =='-' || operat =='/')
   {
     check=1;
   }
