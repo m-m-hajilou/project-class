@@ -49,7 +49,7 @@ int getOperator(char *operator)
   *operator=operat;
   return 1;
 }
-char switchingOperator (int operator)
+int switchingOperator (int operator)
 {
   float answer;
   switch (operator) {
