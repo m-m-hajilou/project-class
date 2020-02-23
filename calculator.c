@@ -4,47 +4,13 @@ int getNumbersAndOperator( float *,  float *,char *);
 int getOperator( char *);
 float calculator()
 {
-  float answer;
   char operator;
   float number1;
   float number2;
   printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for comput: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand)" );
   getNumbersAndOperator(&number1,&number2,&operator);
 
-  switch (operator) {
-    case '/':
-    {
-    #include "calculatorDivisible.h"
-    answer=divisible(number1,number2);
-    printf("%f\n",answer );
-      break;
-    }
-    case '*':
-    {
-      #include "calculatorMulti.h"
-    answer=multi(number1,number2);
-    printf("\n%f\n",answer );
-      break;
-    }
-    case '-':
-    {
-    #include "calculatorMinus.h"
-    answer=minus(number1,number2);
-    printf("\n%f\n",answer );
-      break;
-    }
-    case '+':
-    {
-    #include "calculatorSum.h"
-    answer=sum(number1,number2);
-    printf("\n%f\n",answer );
-      break;
-    }
-    default:
-    {
-      printf("%s\n","Your operator cannot be identified in our application" );
-    }
-  }
+
 
 }
 
@@ -83,9 +49,44 @@ int getOperator(char *operator)
   *operator=operat;
   return 1;
 }
-float switching (int operator)
+float switchingOperator (int operator)
 {
-
+  float answer;
+  switch (operator) {
+    case '/':
+    {
+    #include "calculatorDivisible.h"
+    answer=divisible(number1,number2);
+    printf("%f\n",answer );
+      return answer;
+    }
+    case '*':
+    {
+      #include "calculatorMulti.h"
+    answer=multi(number1,number2);
+    printf("\n%f\n",answer );
+      return answer;
+    }
+    case '-':
+    {
+    #include "calculatorMinus.h"
+    answer=minus(number1,number2);
+    printf("\n%f\n",answer );
+      return answer;
+    }
+    case '+':
+    {
+    #include "calculatorSum.h"
+    answer=sum(number1,number2);
+    printf("\n%f\n",answer );
+      return answer;
+    }
+    default:
+    {
+      return 0;
+      //printf("%s\n","Your operator cannot be identified in our application" );
+    }
+  }
 }
 
 int main(int argc, char const *argv[])
