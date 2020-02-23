@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include "hajilou.h"
 int getNumbersAndOperator( float *,  float *,char *);
+float calculateAnswer(float,float ,char);
 int getOperator( char *);
 float calculator()
 {
+  float answer;
   char operator;
   float number1;
   float number2;
   printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for comput: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand)" );
   getNumbersAndOperator(&number1,&number2,&operator);
-
-
-
+  answer=calculateAnswer(number1,number2,operator);
 }
 
 int getNumbersAndOperator(float *number1,float *number2,char *operator)
@@ -49,31 +49,49 @@ int getOperator(char *operator)
   *operator=operat;
   return 1;
 }
-int switchingOperator (int operator)
+
+float calculateAnswer(float number1,float number2,char operator)
 {
-  float answer;
+    float answer;
   switch (operator) {
     case '/':
     {
-      return '/';
+    #include "calculatorDivisible.h"
+    answer=divisible(number1,number2);
+    return answer;
+      break;//Just to observe the principles switch
     }
     case '*':
     {
-      return '*';
+      #include "calculatorMulti.h"
+    answer=multi(number1,number2);
+    return answer;
+      break;
     }
     case '-':
     {
-      return '-';
+    #include "calculatorMinus.h"
+    answer=minus(number1,number2);
+    return answer;
+      break;
     }
     case '+':
     {
-      return '+';
+    #include "calculatorSum.h"
+    answer=sum(number1,number2);
+    return answer;
+      break;
     }
     default:
     {
-      return "Null";
+      return 0;
     }
   }
+}
+
+int printAnswer()
+{
+
 }
 
 int main(int argc, char const *argv[])
