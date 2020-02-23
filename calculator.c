@@ -49,42 +49,29 @@ int getOperator(char *operator)
   *operator=operat;
   return 1;
 }
-float switchingOperator (int operator)
+char switchingOperator (int operator)
 {
   float answer;
   switch (operator) {
     case '/':
     {
-    #include "calculatorDivisible.h"
-    answer=divisible(number1,number2);
-    printf("%f\n",answer );
-      return answer;
+      return '/';
     }
     case '*':
     {
-      #include "calculatorMulti.h"
-    answer=multi(number1,number2);
-    printf("\n%f\n",answer );
-      return answer;
+      return '*';
     }
     case '-':
     {
-    #include "calculatorMinus.h"
-    answer=minus(number1,number2);
-    printf("\n%f\n",answer );
-      return answer;
+      return '-';
     }
     case '+':
     {
-    #include "calculatorSum.h"
-    answer=sum(number1,number2);
-    printf("\n%f\n",answer );
-      return answer;
+      return '+';
     }
     default:
     {
-      return 0;
-      //printf("%s\n","Your operator cannot be identified in our application" );
+      return "Null";
     }
   }
 }
