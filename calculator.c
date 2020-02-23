@@ -3,6 +3,7 @@
 int getNumbersAndOperator( float *,  float *,char *);
 float calculateAnswer(float,float ,char);
 int getOperator( char *);
+int printAnswer(float number1,float number2,char operator,float answer);
 float calculator()
 {
   float answer;
@@ -12,6 +13,7 @@ float calculator()
   printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for comput: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand)" );
   getNumbersAndOperator(&number1,&number2,&operator);
   answer=calculateAnswer(number1,number2,operator);
+  printAnswer(number1, number2, operator, answer);
 }
 
 int getNumbersAndOperator(float *number1,float *number2,char *operator)
@@ -89,7 +91,7 @@ float calculateAnswer(float number1,float number2,char operator)
   }
 }
 
-int printAnswer()
+int printAnswer(float number1,float number2,char operator,float answer)
 {
 
 }
