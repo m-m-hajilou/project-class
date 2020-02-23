@@ -83,6 +83,10 @@ int getOperator(char *operator)
   *operator=operat;
   return 1;
 }
+float switching (int operator)
+{
+
+}
 
 int main(int argc, char const *argv[])
 {
