@@ -11,9 +11,13 @@ float calculator()
   float number1;
   float number2;
   printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for comput: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand)" );
-  getNumbersAndOperator(&number1,&number2,&operator);
-  answer=calculateAnswer(number1,number2,operator);
-  printAnswer(number1, number2, operator, answer);
+  do{
+    getNumbersAndOperator(&number1,&number2,&operator);
+    answer=calculateAnswer(number1,number2,operator);
+    printAnswer(number1, number2, operator, answer);
+
+    printf("%s\n","\n** Do you want to countinu if yes then press key enter or if you want end  then enter EOF or 1 ** \n\n" );
+  }while (getchar()!=EOF);
 }
 
 int getNumbersAndOperator(float *number1,float *number2,char *operator)
