@@ -95,7 +95,7 @@ float calculateAnswer(float number1,float number2,char operator)
 int printAnswer(float number1,float number2,char operator,float answer)
 {
   printf("%s\n\n","**  THE  ANSWER  **");
-  printf("%f  %c  %f  =  %f\n \n",number1,operator,number2,answer );
+  printf("%.1f  %c  %.1f  =  %.1f\n \n",number1,operator,number2,answer );
 }
 
 int main(int argc, char const *argv[])
