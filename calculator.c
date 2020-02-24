@@ -26,6 +26,7 @@ int getNumbersAndOperator(float *number1,float *number2,char *operator)
 
   printf("%s\n","please inserttt second number \n \n");
   *number2= getNumber();
+  printf("\n \n" );
 
 }
 
@@ -93,7 +94,7 @@ float calculateAnswer(float number1,float number2,char operator)
 
 int printAnswer(float number1,float number2,char operator,float answer)
 {
-  //printf("%d %c %d = %d \n",number1,operator,number2," = ",answer );
+  printf("%s\n\n","**  THE  ANSWER  **");
   printf("%f  %c  %f  =  %f\n",number1,operator,number2,answer );
 }
 
