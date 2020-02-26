@@ -19,7 +19,8 @@ float calculator()
 
     printf("%s\n","\n** Do you want to countinu if yes then insert 1 and press key enter or if you want end  insert 0 and press key enter ** \n\n" );
     n=getNumber();
-  }while (n!=1);
+  }while (n!=1 && n==0);
+  printf("%s\n", "**FINISH CALCUTE** \n . YA ALI");
 }
 
 int getNumbersAndOperator(float *number1,float *number2,char *operator)
