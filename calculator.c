@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "hajilou.h"
+#include <stdbool.h>
 int getNumbersAndOperator( float *,  float *,char *);
 float calculateAnswer(float,float ,char);
 int getOperator( char *);
@@ -61,6 +62,7 @@ int getOperator(char *operator)
 
 float calculateAnswer(float number1,float number2,char operator)
 {
+
     float answer;
   switch (operator) {
     case '/':
