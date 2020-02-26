@@ -4,6 +4,7 @@
 int getNumbersAndOperator( float *,  float *,char *);
 float calculateAnswer(float,float ,char);
 int getOperator( char *);
+int checkIncluding(char );
 int printAnswer(float number1,float number2,char operator,float answer);
 float calculator()
 {
@@ -20,7 +21,7 @@ float calculator()
       printf("%s\n","The operator not Available but now operator including  Try again calculat");
       continue;
     }
-      elseif(checkIncluding())
+      else if(checkIncluding(operator))
       {
         answer=calculateAnswer(number1,number2,operator);
         printAnswer(number1, number2, operator, answer);
@@ -75,6 +76,7 @@ float calculateAnswer(float number1,float number2,char operator)
   switch (operator) {
     case '/':
     {
+        #include "calculatorDivisible.h"
         answer=divisible(number1,number2);
         return answer;
         break;//Just to observe the principles switch
@@ -110,22 +112,19 @@ float calculateAnswer(float number1,float number2,char operator)
 
 int checkIncluding(char operator)
 {
-  bool divisible,multi,sum,minus;
-  divisible,multi,sum,minus=false;
+  bool divisibles,multi,sum,minus;
+  divisibles,multi,sum,minus=false;
 
-    if(divisible==true)
+    if(divisibles==true)
     {
       return 1;
     }
-      elseif(divisible==false)
+      else if(divisibles==false)
       {
-        #include "calculatorDivisible.h"
-        divisible=true;
-        return 0
+                divisibles = true;
+
+        return 0;
       }
-
-
-
 }
 
 int printAnswer(float number1,float number2,char operator,float answer)
