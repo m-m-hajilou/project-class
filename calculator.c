@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "hajilou.h"
-#include <conio.h>
 int getNumbersAndOperator( float *,  float *,char *);
 float calculateAnswer(float,float ,char);
 int getOperator( char *);
