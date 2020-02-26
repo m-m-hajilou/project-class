@@ -78,6 +78,7 @@ float calculateAnswer(float number1,float number2,char operator)
         elseif(divisible==false)
         {
           #include "calculatorDivisible.h"
+          divisible=true;
           return 0
         }
     }
