@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "hajilou.h"
+#include <conio.h>
 int getNumbersAndOperator( float *,  float *,char *);
 float calculateAnswer(float,float ,char);
 int getOperator( char *);
@@ -17,7 +18,7 @@ float calculator()
     printAnswer(number1, number2, operator, answer);
 
     printf("%s\n","\n** Do you want to countinu if yes then press key enter or if you want end  then enter EOF or 1 ** \n\n" );
-  }while (getchar()!=EOF);
+  }while (getchar()!=1);
 }
 
 int getNumbersAndOperator(float *number1,float *number2,char *operator)
