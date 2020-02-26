@@ -63,18 +63,15 @@ int getOperator(char *operator)
 float calculateAnswer(float number1,float number2,char operator)
 {
   float answer;
-
+  if(checkIncluding(operator))
+  {
   switch (operator) {
     case '/':
     {
         answer=divisible(number1,number2);
         return answer;
         break;//Just to observe the principles switch
-        elseif(divisible==false)
-        {
-          divisible=true;
-          return 0
-        }
+
     }
     case '*':
     {
@@ -100,8 +97,14 @@ float calculateAnswer(float number1,float number2,char operator)
     default:
     {
       return 0;
+      break;
     }
   }
+ }
+ elseif(!checkIncluding())
+ {
+   return 0;
+ }
 }
 
 int checkIncluding(char operator)
