@@ -68,10 +68,18 @@ float calculateAnswer(float number1,float number2,char operator)
   switch (operator) {
     case '/':
     {
-      #include "calculatorDivisible.h"
-      answer=divisible(number1,number2);
-      return answer;
-      break;//Just to observe the principles switch
+      if(divisible==true)
+      {
+
+        answer=divisible(number1,number2);
+        return answer;
+        break;//Just to observe the principles switch
+      }
+        elseif(divisible==false)
+        {
+          #include "calculatorDivisible.h"
+          return 0
+        }
     }
     case '*':
     {
