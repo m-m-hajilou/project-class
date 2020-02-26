@@ -15,11 +15,19 @@ float calculator()
   printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for comput: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand) then press enter \n\n" );
   do{
     getNumbersAndOperator(&number1,&number2,&operator);
-    answer=calculateAnswer(number1,number2,operator);
-    printAnswer(number1, number2, operator, answer);
+    if(!checkIncluding(operator))
+    {
+      printf("%s\n","The operator not Available but now operator including  Try again calculat");
+      continue;
+    }
+      elseif(checkIncluding())
+      {
+        answer=calculateAnswer(number1,number2,operator);
+        printAnswer(number1, number2, operator, answer);
 
-    printf("%s\n","\n** Do you want to countinu if yes then insert 1 and press key enter or if you want end  insert 0 and press key enter ** \n\n" );
-    n=getNumberConfine(0,1);//hajilou.h
+        printf("%s\n","\n** Do you want to countinu if yes then insert 1 and press key enter or if you want end  insert 0 and press key enter ** \n\n" );
+        n=getNumberConfine(0,1);//hajilou.h
+      }
   }while (n!=1 && n==0);
   printf("%s\n", "**FINISH CALCUTE** \n . YA ALI");
 }
