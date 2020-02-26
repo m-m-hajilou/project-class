@@ -1,8 +1,8 @@
 #include<stdio.h>
 float inputNumber;
-float getNumberConfine(int low,int hi,char message)
+float getNumberConfineAndMessage(int low,int hi,char message)
 {
-  printf("%s please insert true number  the number is %d <= input number >= %d And the home notFull \n \n ",message,low,hi);
+  printf("%s please insert true number  the number is %d <= input number >= %d  \n \n ",message,low,hi);
   do
   {
     scanf("%f",&inputNumber);
@@ -10,7 +10,21 @@ float getNumberConfine(int low,int hi,char message)
     {
     return inputNumber;
     }
-    printf("***error***   your number not true   ***error*** ");
+    printf("%s***error***   your number not true   ***error*** \n please insert true number  the number is %d <= input number >= %d  \n \n ",low,hi);
+  }  while (inputNumber<=low | inputNumber>=hi);
+}
+
+float getNumberConfine(int low,int hi)
+{
+  printf(" please insert true number  the number is %d <= input number >= %d  \n \n ",low,hi);
+  do
+  {
+    scanf("%f",&inputNumber);
+    if(inputNumber>=low & inputNumber<=hi)
+    {
+    return inputNumber;
+    }
+    printf("***error***   your number not true   ***error*** \n please insert true number  the number is %d <= input number >= %d  \n \n ",low,hi);
   }  while (inputNumber<=low | inputNumber>=hi);
 }
 
