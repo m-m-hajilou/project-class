@@ -62,35 +62,36 @@ int getOperator(char *operator)
 
 float calculateAnswer(float number1,float number2,char operator)
 {
-
-    float answer;
+  float answer;
+  bool divisible,multi,sum,minus;
+  divisible,multi,sum,minus=false;
   switch (operator) {
     case '/':
     {
-    #include "calculatorDivisible.h"
-    answer=divisible(number1,number2);
-    return answer;
+      #include "calculatorDivisible.h"
+      answer=divisible(number1,number2);
+      return answer;
       break;//Just to observe the principles switch
     }
     case '*':
     {
       #include "calculatorMulti.h"
-    answer=multi(number1,number2);
-    return answer;
+      answer=multi(number1,number2);
+      return answer;
       break;
     }
     case '-':
     {
-    #include "calculatorMinus.h"
-    answer=minus(number1,number2);
-    return answer;
+      #include "calculatorMinus.h"
+      answer=minus(number1,number2);
+      return answer;
       break;
     }
     case '+':
     {
-    #include "calculatorSum.h"
-    answer=sum(number1,number2);
-    return answer;
+      #include "calculatorSum.h"
+      answer=sum(number1,number2);
+      return answer;
       break;
     }
     default:
