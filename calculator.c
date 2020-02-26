@@ -17,8 +17,9 @@ float calculator()
     answer=calculateAnswer(number1,number2,operator);
     printAnswer(number1, number2, operator, answer);
 
-    printf("%s\n","\n** Do you want to countinu if yes then press key enter or if you want end  then enter EOF or 1 ** \n\n" );
-    scanf("%d\n",&n);
+    printf("%s\n","\n** Do you want to countinu if yes then insert 1 and press key enter or if you want end  insert 0 and press key enter ** \n\n" );
+    //scanf("%d\n",&n);
+    n=getNumber();
   }while (n!=1);
 }
 
