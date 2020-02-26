@@ -63,21 +63,15 @@ int getOperator(char *operator)
 float calculateAnswer(float number1,float number2,char operator)
 {
   float answer;
-  bool divisible,multi,sum,minus;
-  divisible,multi,sum,minus=false;
+
   switch (operator) {
     case '/':
     {
-      if(divisible==true)
-      {
-
         answer=divisible(number1,number2);
         return answer;
         break;//Just to observe the principles switch
-      }
         elseif(divisible==false)
         {
-          #include "calculatorDivisible.h"
           divisible=true;
           return 0
         }
@@ -110,9 +104,24 @@ float calculateAnswer(float number1,float number2,char operator)
   }
 }
 
-int checkInluding(char operator)
+int checkIncluding(char operator)
 {
-  
+  bool divisible,multi,sum,minus;
+  divisible,multi,sum,minus=false;
+
+    if(divisible==true)
+    {
+      return 1;
+    }
+      elseif(divisible==false)
+      {
+        #include "calculatorDivisible.h"
+        divisible=true;
+        return 0
+      }
+
+
+
 }
 
 int printAnswer(float number1,float number2,char operator,float answer)
