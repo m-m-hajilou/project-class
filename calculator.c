@@ -63,8 +63,7 @@ int getOperator(char *operator)
 float calculateAnswer(float number1,float number2,char operator)
 {
   float answer;
-  if(checkIncluding(operator))
-  {
+
   switch (operator) {
     case '/':
     {
@@ -97,14 +96,8 @@ float calculateAnswer(float number1,float number2,char operator)
     default:
     {
       return 0;
-      break;
     }
   }
- }
- elseif(!checkIncluding())
- {
-   return 0;
- }
 }
 
 int checkIncluding(char operator)
