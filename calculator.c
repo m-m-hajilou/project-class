@@ -83,6 +83,23 @@ float calculateAnswer(float number1,float number2,char operator)
         break;//Just to observe the principles switch
 
     }
+    case '/':
+    {
+
+      if(divisibles==false)
+      {
+        #include "calculatorDivisible.h"
+        divisibles = true;
+        return 0;
+        break;
+      }
+        else if(divisibles==true)
+        {
+          answer=divisible(number1,number2);
+          return answer;
+          break;//Just to observe the principles switch
+        }
+
     case '*':
     {
       #include "calculatorMulti.h"
