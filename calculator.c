@@ -115,17 +115,25 @@ int checkIncluding(char operator)
 {
   bool divisibles,multi,sum,minus;
   divisibles,multi,sum,minus=false;
+  switch (operator) {
 
-    if(divisibles==true)
+    case '*':
     {
-      return 1;
-    }
-      else if(divisibles==false)
+      if(divisibles==true)
       {
-        #include "calculatorDivisible.h"
-        divisibles = true;
-        return 0;
+        return 1;
+        break;
       }
+        else if(divisibles==false)
+        {
+          #include "calculatorDivisible.h"
+          divisibles = true;
+          return 0;
+          break;
+        }
+    }
+  }
+
 }
 
 int printAnswer(float number1,float number2,char operator,float answer)
