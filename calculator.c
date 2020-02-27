@@ -73,16 +73,8 @@ int getOperator(char *operator)
 float calculateAnswer(float number1,float number2,char operator)
 {
   float answer;
-
+  bool divisibles = false;
   switch (operator) {
-    case '/':
-    {
-
-        answer=divisible(number1,number2);
-        return answer;
-        break;//Just to observe the principles switch
-
-    }
     case '/':
     {
 
@@ -99,6 +91,7 @@ float calculateAnswer(float number1,float number2,char operator)
           return answer;
           break;//Just to observe the principles switch
         }
+    }
 
     case '*':
     {
