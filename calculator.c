@@ -117,7 +117,7 @@ int checkIncluding(char operator)
   divisibles,multi,sum,minus=false;
   switch (operator) {
 
-    case '*':
+    case '/':
     {
       if(divisibles==true)
       {
