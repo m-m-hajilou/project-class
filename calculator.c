@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "hajilou.h"
 #include <stdbool.h>
+int checkIncluding(char );
 int getNumbersAndOperator( float *,  float *,char *);
 float calculateAnswer(float,float ,char);
 int getOperator( char *);
-int checkIncluding(char );
 int printAnswer(float number1,float number2,char operator,float answer);
 float calculator()
 {
@@ -77,7 +77,7 @@ float calculateAnswer(float number1,float number2,char operator)
   switch (operator) {
     case '/':
     {
-        
+
         answer=divisible(number1,number2);
         return answer;
         break;//Just to observe the principles switch
