@@ -16,8 +16,9 @@ float calculator()
   float number1;
   float number2;
   int n;
-  printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for calculate: first insert number 1(operand) . second insetr operator (*(multi) , /(divisible) , +(sum) , -(minus) ) . third insert number 1(operand) then press enter \n\n" );
-  printf("%s\n","* Attention * :  FIRST in insert first number if number insert = 1* (or oprate (-,/,+)) this equal 2 * (number)  and in insert second number this is bug and Causes an loop.  SECOND in insert oprate if operate insert = number + operate(exampel :2/) this false and  in insert oprate if operate insert = operate + number (exampel :/2) this equal /   " );
+  printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for calculate: first insert number 1(operand) . Secondly insetr operator (*(multi) , /(divisible) , +(sum) , -(minus) ) . third insert number 1(operand) then press enter \n\n" );
+  printf("%s\n","* Attention * :  FIRST for insert first number if number insert = 1* (or oprate (-,/,+)) this equal 2 * (number)  and for insert second number this is bug and Causes an loop.  SECONDly for insert oprate if operate insert = number + operate(exampel :2/) this false and also  for insert oprate if operate insert = operate + number (exampel :/2) this equal / (devisible)   * end * \n\n");
+  printf("******************************************** \n");
   do{
     getNumbersAndOperator(&number1,&number2,&operator);
     answer=calculateAnswer(number1,number2,operator);
@@ -46,7 +47,7 @@ int getNumbersAndOperator(float *number1,float *number2,char *operator)
 
   getOperator(operator);
 
-  printf("\n%s\n","please inserttt second number  \n");
+  printf("\n%s\n","please inserttt Secondly number  \n");
   *number2= getNumber();
   printf("\n \n" );
 
