@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "hajilou.h"
 #include <stdbool.h>
-int checkIncluding(char );
 int getNumbersAndOperator( float *,  float *,char *);
 float calculateAnswer(float,float ,char);
 int getOperator( char *);
@@ -16,15 +15,16 @@ float calculator()
   printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for comput: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand) then press enter \n\n" );
   do{
     getNumbersAndOperator(&number1,&number2,&operator);
-    if(!checkIncluding(operator))
+    answer=calculateAnswer(number1,number2,operator);
+    if(answer==0)
     {
       printf("%s\n","The operator not Available but now operator including  Try again calculat");
       n=0;//for continue while
       continue;
     }
-      else if(checkIncluding(operator))
+      else if(answer!=0)
       {
-        answer=calculateAnswer(number1,number2,operator);
+
         printAnswer(number1, number2, operator, answer);
 
         printf("%s\n","\n** Do you want to countinu if yes then insert 1 and press key enter or if you want end  insert 0 and press key enter ** \n\n" );
@@ -81,13 +81,14 @@ float calculateAnswer(float number1,float number2,char operator)
 
       if(divisibles==false)
       {
-        #include "calculatorDivisible.h"
+
         divisibles = true;
         return 0;
         break;
       }
         else if(divisibles==true)
         {
+          #include "calculatorDivisible.h"
           answer=divisible(number1,number2);
           return answer;
           break;//Just to observe the principles switch
