@@ -6,8 +6,7 @@ float calculateAnswer(float,float ,char);
 int getOperator( char *);
 int printAnswer(float number1,float number2,char operator,float answer);
 
-bool divisibles,multi,sum,minus;
-divisibles,multi,sum,minus=false;
+bool divisibles=false,multi=false,sum=false,minus=false;
 
 float calculator()
 {
