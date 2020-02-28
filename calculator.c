@@ -16,7 +16,7 @@ float calculator()
   float number1;
   float number2;
   int n;
-  printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for comput: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand) then press enter \n\n" );
+  printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for calculate: first insert number 1(operand) . second insetr operator (*,/,+,-) . third insert number 1(operand) then press enter \n\n" );
   do{
     getNumbersAndOperator(&number1,&number2,&operator);
     answer=calculateAnswer(number1,number2,operator);
