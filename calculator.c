@@ -31,7 +31,7 @@ float calculator()
 
         printAnswer(number1, number2, operator, answer);
 
-        printf("%s\n","\n** Do you want to countinu if yes then insert 1 and press key enter or if you want end  insert 0 and press key enter ** \n\n" );
+        printf("%s\n","\n** Do you want to countinu if yes then insert 1 and press key enter else  if you discontinue  insert 0 and press key enter ** \n\n" );
         n=getNumberConfine(0,1);//hajilou.h
       }
   }while (n!=1 && n==0);
@@ -146,7 +146,7 @@ float calculateAnswer(float number1,float number2,char operator)
         break;
         }
     }
-    
+
     default:
     {
       return 0;
