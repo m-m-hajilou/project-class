@@ -111,14 +111,25 @@ float calculateAnswer(float number1,float number2,char operator)
           return answer;
           break;
         }
-  }
+    }
+
     case '-':
     {
-      #include "calculatorMinus.h"
-      answer=minus(number1,number2);
-      return answer;
-      break;
+      if(minus==false)
+      {
+        minus = true;
+        return keyReturn0;
+        break;
+      }
+        else if(minus==true)
+        {
+        #include "calculatorMinus.h"
+        answer=minus(number1,number2);
+        return answer;
+        break;
+        }
     }
+  
     case '+':
     {
       #include "calculatorSum.h"
