@@ -7,6 +7,7 @@ int getOperator( char *);
 int printAnswer(float number1,float number2,char operator,float answer);
 
 bool divisibles=false,multi=false,sum=false,minus=false;
+bool keyReturn0=202921101859;//for ib calculateAnswer if answer ==0 equal return 0
 
 float calculator()
 {
@@ -19,13 +20,13 @@ float calculator()
   do{
     getNumbersAndOperator(&number1,&number2,&operator);
     answer=calculateAnswer(number1,number2,operator);
-    if(answer==0)
+    if(answer==keyReturn0)
     {
       printf("%s\n","The operator not Available but now operator including  Try again calculat");
       n=0;//for continue while
       continue;
     }
-      else if(answer!=0)
+      else if(answer!=keyReturn0)
       {
 
         printAnswer(number1, number2, operator, answer);
@@ -83,7 +84,7 @@ float calculateAnswer(float number1,float number2,char operator)
       if(divisibles==false)
       {
         divisibles = 1;
-        return 0;
+        return keyReturn0;
         break;
       }
         else if(divisibles==true)
