@@ -74,19 +74,18 @@ float calculateAnswer(float number1,float number2,char operator)
 {
   float answer;
   bool divisibles,multi,sum,minus;
-  divisibles,multi,sum,minus=false;
+  divisibles,multi,sum,minus=0;
   switch (operator) {
     case '/':
     {
 
-      if(divisibles==false)
+      if(divisibles==0)
       {
-
-        divisibles = true;
+        divisibles = 1;
         return 0;
         break;
       }
-        else if(divisibles==true)
+        else if(divisibles==)
         {
           #include "calculatorDivisible.h"
           answer=divisible(number1,number2);
