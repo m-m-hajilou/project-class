@@ -56,7 +56,7 @@ int getOperator(char *operator)
   char operat;//just send pointer
   int check=0;
   printf("%s\n","please insert operator \n \n");
-  scanf("%s",&operat);
+  scanf("%s1",&operat);//read just character
   if(operat =='*' || operat =='+' || operat =='-' || operat =='/')
   {
     check=1;
@@ -129,14 +129,24 @@ float calculateAnswer(float number1,float number2,char operator)
         break;
         }
     }
-  
+
     case '+':
     {
-      #include "calculatorSum.h"
-      answer=sum(number1,number2);
-      return answer;
-      break;
+      if(sum==false)
+      {
+        sum = true;
+        return keyReturn0;
+        break;
+      }
+        else if(sum==true)
+        {
+        #include "calculatorSum.h"
+        answer=sum(number1,number2);
+        return answer;
+        break;
+        }
     }
+    
     default:
     {
       return 0;
