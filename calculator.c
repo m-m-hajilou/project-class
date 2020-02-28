@@ -83,7 +83,7 @@ float calculateAnswer(float number1,float number2,char operator)
 
       if(divisibles==false)
       {
-        divisibles = 1;
+        divisibles = true;
         return keyReturn0;
         break;
       }
@@ -98,11 +98,20 @@ float calculateAnswer(float number1,float number2,char operator)
 
     case '*':
     {
-      #include "calculatorMulti.h"
-      answer=multi(number1,number2);
-      return answer;
-      break;
-    }
+      if(multi==false)
+      {
+        multi = true;
+        return keyReturn0;
+        break;
+      }
+        else if(multi==true)
+        {
+          #include "calculatorMulti.h"
+          answer=multi(number1,number2);
+          return answer;
+          break;
+        }
+  }
     case '-':
     {
       #include "calculatorMinus.h"
