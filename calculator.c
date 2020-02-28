@@ -22,7 +22,7 @@ float calculator()
     answer=calculateAnswer(number1,number2,operator);
     if(answer==keyReturn0)
     {
-      printf("%s\n","The operator not Available but now operator including  Try again calculat");
+      printf("%s\n"," # # The operator not Available but now operator includ  Try again calculat # #\n\n ");
       n=0;//for continue while
       continue;
     }
@@ -40,12 +40,12 @@ float calculator()
 
 int getNumbersAndOperator(float *number1,float *number2,char *operator)
 {
-  printf("%s\n","please insert first number \n \n");
+  printf("\n%s\n","please insert first number  \n");
   *number1= getNumber();
 
   getOperator(operator);
 
-  printf("%s\n","please inserttt second number \n \n");
+  printf("\n%s\n","please inserttt second number  \n");
   *number2= getNumber();
   printf("\n \n" );
 
@@ -55,7 +55,7 @@ int getOperator(char *operator)
 {
   char operat;//just send pointer
   int check=0;
-  printf("%s\n","please insert operator \n \n");
+  printf("\n%s\n","please insert operator \n");
   scanf("%s1",&operat);//read just character
   if(operat =='*' || operat =='+' || operat =='-' || operat =='/')
   {
