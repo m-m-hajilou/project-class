@@ -7,7 +7,7 @@ int getOperator( char *);
 int printAnswer(float number1,float number2,char operator,float answer);
 
 bool divisibles=false,multi=false,sum=false,minus=false;
-bool keyReturn0=202921101859;//for ib calculateAnswer if answer ==0 equal return 0
+bool keyReturn0=0.202921101859;//for ib calculateAnswer if answer ==0 equal return 0
 
 float calculator()
 {
