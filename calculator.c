@@ -18,6 +18,7 @@ float calculator()
   int n;
   printf("%s\n"," \t\t\t\t IN THE NAME OF ALLAH \n * * calculator * * \n for calculate: first insert number 1(operand) . Secondly insetr operator (*(multi) , /(divisible) , +(sum) , -(minus) ) . third insert number 1(operand) then press enter \n\n" );
   printf("%s\n","* Attention * :  FIRST for insert first number if number insert = 1* (or oprate (-,/,+)) this equal 2 * (number)  and for insert second number this is bug and Causes an loop.  SECONDly for insert oprate if operate insert = number + operate(exampel :2/) this false and also  for insert oprate if operate insert = operate + number (exampel :/2) this equal / (devisible)  Third : for insert first number if number insert = c1 this is bug and Causes an loop   * end * \n\n");
+  printf("%s\n"," **** All the warnings given in this project are either due to language limitations 30 or due to my low effort  (-: **** \n\n" );
   printf("******************************************** \n");
   do{
     getNumbersAndOperator(&number1,&number2,&operator);
