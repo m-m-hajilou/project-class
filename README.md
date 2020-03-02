@@ -16,5 +16,5 @@ This section is about Master Classes by Mehrdad Abbasi
 The exercises are usually written in thirty or thirty plus languages
 Of course, all major projects are categorized into repositories
 And the reason for keeping this repository is that anyone who wants to look at committees
-Sorry for the disruption
+Sorry for the  disruption
 YA ALI
