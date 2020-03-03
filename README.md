@@ -6,7 +6,7 @@
 این قسمت مربوط به تمریمات کلاس برنامه نویسی استاد مهرداد عباسی است که بعدا به ریپوزیتوری های جداگانه جهت  مرتب سازی استفاده شده است
 </h4>
 <h4>
- ببخشید جهت این بینظمی . و دلیل نگهداشتن آن فقط مشاهده کامیت ها است
+ ببخشید جهت این بینظمی . 
 </h4>
 <h4>
 تمرینات معمولا به زبان سی یا سی پلاس پلاس  نوشته شده اند
@@ -33,7 +33,7 @@ IN THE NAME OF THE WORLD ENGINEER
 This section deals with master class programming exercises by Mehrdad Abbasi, later used in separate repositories for sorting.
 </h4>
 <h4>
- Excuse the direction of this disorder. And the reason for keeping it is just watching committees
+ Excuse the direction of this disorder.
 </h4>
 <h4>
 The exercises are usually written in thirty or thirty plus languages
